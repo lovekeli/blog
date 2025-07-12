@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>壁纸引擎</title>
+    <script src="/js/safety/sourceverify.js"></script>
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .fullscreen {
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    </meta>
+    <script>
+        let url=URL.parse(window.location.href);
+        let sys=url.searchParams.get('sys');
+        window.addEventListener('message', (e) => {
+            if (e.origin === window.location.origin) {
+                let event = e.data['event'];
+                let data = e.data['data'];
+                let app = {};
+                switch (event) {
+                    case 'wallpaper':
+                        let img = document.getElementById('img-wallpaper');
+                        let video = document.getElementById('video-wallpaper');
+                        img.hidden = true;
+                        video.hidden = true;
+                        switch (data['type']) {
+                            case 'img':
+                                img.src = data['url'];
+                                img.hidden = false;
+                                break;
+                            case 'video':
+                                video.src = data['url'];
+                                video.hidden = false;
+                                break;
+                        }
+                        localStorage.setItem(sys+'-wallpaper', JSON.stringify(data));
+                        ; break;
+                }
+            }
+        });
+        window.onload = function () {
+            let wallpaper = localStorage.getItem(sys+'-wallpaper');
+            if (!wallpaper) {
+                wallpaper = '{"type":"img","url":"./wallpapers/bg1.jpg"}';
+            }
+            if (wallpaper) {
+                let data = JSON.parse(wallpaper);
+                let img = document.getElementById('img-wallpaper');
+                let video = document.getElementById('video-wallpaper');
+                img.hidden = true;
+                video.hidden = true;
+                switch (data['type']) {
+                    case 'img':
+                        img.src = data['url'];
+                        img.hidden = false;
+                        break;
+                    case 'video':
+                        video.src = data['url'];
+                        video.hidden = false;
+                        break;
+                }
+            }
+            console
+        }
+    </script>
+</head>
+
+<body>
+
+    <img id="img-wallpaper" class="fullscreen">
+    <video id="video-wallpaper"  autoplay muted loop class="fullscreen"
+        type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</body>
+
+</html>

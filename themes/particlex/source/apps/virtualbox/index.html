@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="utf-8">
+    <title>虚拟机</title>
+    <script src="../../js/safety/sourceverify.js"></script>
+    <script>
+        function OpenVM(name) {
+            let VMS = [
+                {
+                    name: 'Alpine Linux',
+                    url: 'https://bellard.org/jslinux/vm.html?url=alpine-x86.cfg&mem=192',
+                    width: 710,
+                    height: 600
+                },
+                {
+                    name: 'Alpine Linux Desktop',
+                    url: 'https://bellard.org/jslinux/vm.html?url=alpine-x86-xwin.cfg&mem=256&graphic=1',
+                    width: 900,
+                    height: 730
+                },
+                {
+                    name: 'Windows 2000',
+                    url: 'https://bellard.org/jslinux/vm.html?url=win2k.cfg&mem=192&graphic=1&w=800&h=600',
+                     width: 900,
+                    height: 730
+                },
+                {
+                    name: 'FreeDOS',
+                    url: 'https://bellard.org/jslinux/vm.html?url=freedos.cfg&mem=64&graphic=1&w=720&h=400',
+                    width: 710,
+                    height: 500
+                },
+                {
+                    name: 'Windows98',
+                    url: 'https://98.js.org/',
+                    width: 800,
+                    height: 600
+                },
+                {
+                    name: 'Windows96',
+                    url: 'https://windows96.net/',
+                    width: 800,
+                    height: 600
+                },
+                {
+                    name: 'Windows7',
+                    url: 'https://win7simu.visnalize.com',
+                    width: 1337,
+                    height: 750
+                }
+            ];
+            for (let i = 0; i < VMS.length; i++) {
+                let vmname = VMS[i].name;
+                if (name == vmname) {
+                    let vm=VMS[i];
+                    window.location.href = vm.url;
+                    const iframes = parent.document.querySelectorAll('iframe');
+                    for (let m = 0; m < iframes.length; m++) {
+                        let iframe = iframes[m];
+                        if (iframe.src.includes(window.location.href)) {
+                            let winid = iframe.getAttribute('name');
+                            let container = window.parent.document.getElementById(winid);
+                            container.style.width = vm.width + 'px';
+                            container.style.height = vm.height + 'px';
+                            container.getElementsByClassName('title')[0].innerHTML+="("+vm.name+")";
+                            return;
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="OpenVM('Alpine Linux')">AlpineLinux(命令版)</button>
+    <button onclick="OpenVM('Alpine Linux Desktop')">AlpineLinux(桌面版)</button>
+    <button onclick="OpenVM('Windows 2000')">Windows 2000</button>
+    <button onclick="OpenVM('FreeDOS')">FreeDOS</button>
+    <button onclick="OpenVM('Windows98')">Windows98</button>
+    <button onclick="OpenVM('Windows96')">Windows96</button>
+    <button onclick="OpenVM('Windows7')">Windows7</button>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+.items-box {
+    /* display: flex; __ card-body已经有了flex，不要重复写*/
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding: 1rem;
+    margin: 20px auto 0;
+    background-color: #fff;
+    border-radius: 0.3rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.item-card {
+    padding: 10px;
+    box-sizing: border-box; /* 确保 padding 不会影响总宽度 */
+    display: block;
+}
+
+.detail-info__cover img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.3rem;
+}
+
+/* 水平滚动容器 */
+.scroll-container-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.scroll-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping to the next line */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
+    padding: 0 auto; /* Ensure there is space for the arrows */
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Webkit browsers */
+}
+
+.scroll-container img {
+    display: inline-block; /* Ensure images are displayed in a row */
+    max-width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 8px; /* Space between images */
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 0.2rem;
+    border-radius: 20%;
+    z-index: 10;
+}
+
+.arrow-left {
+    left: 11px;
+}
+
+.arrow-right {
+    right: 11px;
+}
+
+
+
+/* 定义小于576px的媒体查询 */
+@media (max-width: 576px) {
+    .col-576-4 {
+        flex: 0 0 auto;
+        width: 33.3333%;
+    }
+    .col-576-8 {
+        flex: 0 0 auto;
+        width: 66.6667%;
+    }
+}
+
+/* 定义小于375px的媒体查询 */
+@media (max-width: 375px) {
+    .col-375-12 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}

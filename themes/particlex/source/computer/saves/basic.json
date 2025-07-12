@@ -1,0 +1,882 @@
+{
+  "configs": {
+    "topTaskBar": false,
+    "sound": false,
+    "wallpaper": "../apps/wallpaperengine/wallpapers/bg1.jpg",
+    "wallpaperBlur": false,
+    "wallpaperSlide": false,
+    "wallpaperSlideRandom": true,
+    "wallpaperSlideItv": 1,
+    "wallpaperSlideTime": 1519442460788,
+    "wallpaperSlideIndex": 8,
+    "openMax": 9,
+    "settingSelectApp": 0, 
+    "idCounter": 170,
+    "themeColor": "rgba(2,35,64,1)",
+    "autoThemeColor": true,
+    "wallpapers": [
+      {
+        "image": "../apps/wallpaperengine/wallpapers/bg1.jpg",
+        "preview": "../apps/wallpaperengine/wallpapers/bg1_1.jpg"
+      },
+      {
+        "image": "../apps/wallpaperengine/wallpapers/bg2.jpg",
+        "preview": "../apps/wallpaperengine/wallpapers/bg2_1.jpg"
+      },
+      {
+        "image": "../apps/wallpaperengine/wallpapers/bg3.jpg",
+        "preview": "../apps/wallpaperengine/wallpapers/bg3_1.jpg"
+      },
+      {
+        "image": "../apps/wallpaperengine/wallpapers/bg4.jpg",
+        "preview": "../apps/wallpaperengine/wallpapers/bg4_1.jpg"
+      },
+      {
+        "image": "../apps/wallpaperengine/wallpapers/bg5.jpg",
+        "preview": "../apps/wallpaperengine/wallpapers/bg5_1.jpg"
+      },
+      {
+        "image": "../apps/wallpaperengine/wallpapers/bg6.jpg",
+        "preview": "../apps/wallpaperengine/wallpapers/bg6_1.jpg"
+      },
+      {
+        "image": "../apps/wallpaperengine/wallpapers/bg7.jpg",
+        "preview": "../apps/wallpaperengine/wallpapers/bg7_1.jpg"
+      },
+      {
+        "image": "../apps/wallpaperengine/wallpapers/bg8.jpg",
+        "preview": "../apps/wallpaperengine/wallpapers/bg8_1.jpg"
+      },
+      {
+        "image": "../apps/wallpaperengine/wallpapers/bg9.jpg",
+        "preview": "../apps/wallpaperengine/wallpapers/bg9_1.jpg"
+      },
+      {
+        "image": "../apps/wallpaperengine/wallpapers/bg10.jpg",
+        "preview": "../apps/wallpaperengine/wallpapers/bg10_1.jpg"
+      },
+      {
+        "image": "../apps/wallpaperengine/wallpapers/bg11.jpg",
+        "preview": "../apps/wallpaperengine/wallpapers/bg11_1.jpg"
+      },
+      {
+        "image": "../apps/wallpaperengine/wallpapers/bg12.jpg",
+        "preview": "../apps/wallpaperengine/wallpapers/bg12_1.jpg"
+      },
+      {
+        "image": "../apps/wallpaperengine/wallpapers/bg13.jpg",
+        "preview": "../apps/wallpaperengine/wallpapers/bg13_1.jpg"
+      },
+      {
+        "image": "../apps/wallpaperengine/wallpapers/bg14.jpg",
+        "preview": "../apps/wallpaperengine/wallpapers/bg14_1.jpg"
+      }
+    ],
+    "pathRes": "./res",
+    "shortcutsSortAuto": true,
+    "debug": false,
+    "winBlur": true
+  },
+  "apps": {
+    "lctab": {
+      "addressBar": false,
+      "autoRun": 0,
+      "background": false,
+      "badge": 0,
+      "desc": "导航网站",
+      "icon": {
+        "type": "img",
+        "content": "../apps/lctab/assets/favicon/favicon-32x32.png"
+      },
+      "openMode": "normal",
+      "plugin": false,
+      "position": {
+        "x": "x*0.05",
+        "y": "y*0.05",
+        "left": true,
+        "top": true,
+        "autoOffset": true
+      },
+      "version": "1.0.0",
+      "poweredBy": "罗小黑",
+      "resizable": true,
+      "single": true,
+      "size": {
+        "height": "y*0.8-80",
+        "width": "x*0.8"
+      },
+      "title": "Xtab导航",
+      "url": "/apps/lctab/index.html",
+      "customTile": "Xtab导航",
+      "urlRandomToken": true
+    },
+    "yl-color": {
+      "addressBar": false,
+      "autoRun": 0,
+      "background": false,
+      "badge": 0,
+      "desc": "渐变色选择器",
+      "icon": {
+        "type": "img",
+        "content": "https://files.codelife.cc/tools-icon/webGradients.svg"
+      },
+      "openMode": "normal",
+      "plugin": false,
+      "position": {
+        "x": "x*0.05",
+        "y": "y*0.05",
+        "left": true,
+        "top": true,
+        "autoOffset": true
+      },
+      "version": "1.0.0",
+      "poweredBy": "罗小黑",
+      "resizable": true,
+      "single": true,
+      "size": {
+        "height": "y*0.8-80",
+        "width": "x*0.8"
+      },
+      "title": "渐变色选择器",
+      "url": "https://widget.codelife.cc/webGradients/index.html?sdk_from=itab&",
+      "customTile": "渐变色选择器",
+      "urlRandomToken": true
+    },
+    "yl-system": {
+      "addressBar": false,
+      "autoRun": 0,
+      "background": false,
+      "badge": 0,
+      "desc": "系统设置面板",
+      "icon": {
+        "type": "fa",
+        "bg": "#436fde",
+        "content": "gear"
+      },
+      "openMode": "normal",
+      "plugin": false,
+      "position": {
+        "x": "x*0.05",
+        "y": "y*0.05",
+        "left": true,
+        "top": true,
+        "autoOffset": true
+      },
+      "version": "1.0.0",
+      "poweredBy": "管理员",
+      "resizable": true,
+      "single": true,
+      "size": {
+        "height": "y*0.8-80",
+        "width": "x*0.8"
+      },
+      "title": "系统设置",
+      "url": "./res/apps/yl-system/index.html",
+      "customTile": "",
+      "urlRandomToken": true
+    },
+    "yl-color-picker": {
+      "addressBar": false,
+      "autoRun": 0,
+      "background": false,
+      "badge": 0,
+      "desc": "简单的取色器",
+      "icon": {
+        "type": "fa",
+        "bg": "#3289c7",
+        "content": "eyedropper"
+      },
+      "openMode": "normal",
+      "plugin": false,
+      "position": {
+        "x": "(x-207)/2",
+        "y": "(y-239)/2",
+        "left": true,
+        "top": true,
+        "autoOffset": false
+      },
+      "version": "1.0.0",
+      "poweredBy": "管理员",
+      "resizable": false,
+      "single": true,
+      "size": {
+        "width": "207",
+        "height": "239"
+      },
+      "title": "取色器",
+      "url": "./res/apps/colorPicker/colorPicker.html",
+      "customTile": "",
+      "urlRandomToken": true
+    },
+    "yl-browser": {
+      "addressBar": true,
+      "autoRun": 0,
+      "background": false,
+      "badge": 0,
+      "desc": "浏览器",
+      "icon": {
+        "type": "fa",
+        "content": "internet-explorer",
+        "bg": "#3a55c2"
+      },
+      "openMode": "normal",
+      "plugin": false,
+      "position": {
+        "autoOffset": true,
+        "left": true,
+        "top": true,
+        "x": "x*0.1",
+        "y": "y*0.1"
+      },
+      "version": "1.0.0",
+      "poweredBy": "管理员",
+      "resizable": true,
+      "single": false,
+      "size": {
+        "height": "y*0.8-80",
+        "width": "x*0.8"
+      },
+      "title": "浏览器",
+      "url": "./res/apps/browser/index.html",
+      "customTile": "浏览器",
+      "urlRandomToken": true
+    },
+    "app-store": {
+      "addressBar": false,
+      "autoRun": 0,
+      "background": false,
+      "badge": 0,
+      "desc": "",
+      "icon": {
+        "type": "fa",
+        "content": "shopping-bag",
+        "bg": "#b36aba"
+      },
+      "openMode": "normal",
+      "plugin": false,
+      "position": {
+        "autoOffset": true,
+        "left": true,
+        "top": true,
+        "x": "x*0.1",
+        "y": "y*0.1"
+      },
+      "version": "1.0.0",
+      "poweredBy": "管理员",
+      "resizable": true,
+      "single": true,
+      "size": {
+        "height": "y*0.8-80",
+        "width": "x*0.8"
+      },
+      "title": "应用商店",
+      "url": "../apps/appstore/index.html",
+      "customTile": "",
+      "urlRandomToken": true
+    },
+    "app-wallpaperstore": {
+      "addressBar": false,
+      "autoRun": 0,
+      "background": false,
+      "badge": 0,
+      "desc": "在线壁纸",
+      "icon": {
+        "type": "img",
+        "content": "../apps/wallpaperstore/icon.png"
+      },
+      "openMode": "normal",
+      "plugin": false,
+      "position": {
+        "autoOffset": true,
+        "left": true,
+        "top": true,
+        "x": "x*0.1",
+        "y": "y*0.1"
+      },
+      "version": "1.0.0",
+      "poweredBy": "罗小黑",
+      "resizable": true,
+      "single": true,
+      "size": {
+        "height": "y*0.8-80",
+        "width": "x*0.8"
+      },
+      "title": "壁纸商城",
+      "url": "../apps/wallpaperstore/index.html",
+      "customTile": "",
+      "urlRandomToken": true
+    },
+    "yl-app-home": {
+      "addressBar": false,
+      "autoRun": 0,
+      "background": false,
+      "badge": 0,
+      "desc": "官方网站",
+      "icon": {
+        "type": "img",
+        "content": "../img/head.jpeg"
+      },
+      "openMode": "outer",
+      "plugin": false,
+      "position": {
+        "autoOffset": true,
+        "left": true,
+        "top": true,
+        "x": "x*0.1",
+        "y": "y*0.1"
+      },
+      "version": "1.0.0",
+      "poweredBy": "罗小黑",
+      "resizable": true,
+      "single": true,
+      "size": {
+        "height": "y*0.8-80",
+        "width": "x*0.8"
+      },
+      "title": "官网",
+      "url": "/",
+      "customTile": "",
+      "urlRandomToken": true
+    },
+    "lc-excalidraw": {
+      "addressBar": false,
+      "autoRun": 0,
+      "background": false,
+      "badge": 0,
+      "desc": "博思白板",
+      "icon": {
+        "type": "img",
+        "content": "../apps/excalidraw/favicon-32x32.png"
+      },
+      "openMode": "normal",
+      "plugin": false,
+      "position": {
+        "autoOffset": true,
+        "left": true,
+        "top": true,
+        "x": "x*0.1",
+        "y": "y*0.1"
+      },
+      "version": "1.0.0",
+      "poweredBy": "罗小黑",
+      "resizable": true,
+      "single": true,
+      "size": {
+        "height": "y*0.8-80",
+        "width": "x*0.8"
+      },
+      "title": "博思白板",
+      "url": "../apps/excalidraw/index.html",
+      "customTile": "",
+      "urlRandomToken": true
+    },
+    "ylui-image-host": {
+      "addressBar": false,
+      "autoRun": 0,
+      "background": false,
+      "badge": 0,
+      "desc": "",
+      "icon": {
+        "type": "fa",
+        "content": "image",
+        "bg": "#72b076"
+      },
+      "openMode": "normal",
+      "plugin": false,
+      "position": {
+        "autoOffset": true,
+        "left": true,
+        "top": true,
+        "x": "x*0.05",
+        "y": "y*0.05"
+      },
+      "version": "1.0.0",
+      "poweredBy": "imgchr.com",
+      "resizable": true,
+      "single": true,
+      "size": {
+        "height": "y*0.8-80",
+        "width": "x*0.8"
+      },
+      "title": "路过图床",
+      "url": "https://imgchr.com/",
+      "customTile": "",
+      "urlRandomToken": true
+    },
+    "app-games": {
+      "addressBar": false,
+      "autoRun": 0,
+      "background": false,
+      "badge": 0,
+      "desc": "在线游戏厅",
+      "icon": {
+        "type": "img",
+        "content": "../assets/desktop/icons/desktop/gamestore.png"
+      },
+      "openMode": "normal",
+      "plugin": false,
+      "position": {
+        "autoOffset": true,
+        "left": true,
+        "top": true,
+        "x": "x*0.05",
+        "y": "y*0.05"
+      },
+      "version": "1.0.0",
+      "poweredBy": "罗小黑",
+      "resizable": true,
+      "single": true,
+      "size": {
+        "height": "y*0.8-80",
+        "width": "x*0.8"
+      },
+      "title": "游戏厅",
+      "url": "../apps/gamestore/index.html",
+      "customTile": "",
+      "urlRandomToken": true
+    },
+    "app-music": {
+      "addressBar": false,
+      "autoRun": 0,
+      "background": false,
+      "badge": 0,
+      "desc": "在线音乐",
+      "icon": {
+        "type": "img",
+        "content": "../assets/desktop/icons/desktop/music.png"
+      },
+      "openMode": "normal",
+      "plugin": false,
+      "position": {
+        "autoOffset": true,
+        "left": true,
+        "top": true,
+        "x": "x*0.05",
+        "y": "y*0.05"
+      },
+      "version": "1.0.0",
+      "poweredBy": "罗小黑",
+      "resizable": true,
+      "single": true,
+      "size": {
+        "height": "y*0.8-80",
+        "width": "x*0.8"
+      },
+      "title": "在线音乐",
+      "url": "../apps/music/index.html",
+      "customTile": "",
+      "urlRandomToken": true
+    },
+    "app-note": {
+      "addressBar": false,
+      "autoRun": 0,
+      "background": false,
+      "badge": 0,
+      "desc": "笔记",
+      "icon": {
+        "type": "img",
+        "content": "../assets/desktop/icons/desktop/note.png"
+      },
+      "openMode": "normal",
+      "plugin": false,
+      "position": {
+        "autoOffset": true,
+        "left": true,
+        "top": true,
+        "x": "x*0.05",
+        "y": "y*0.05"
+      },
+      "version": "1.0.0",
+      "poweredBy": "罗小黑",
+      "resizable": true,
+      "single": true,
+      "size": {
+        "height": "y*0.8-80",
+        "width": "x*0.8"
+      },
+      "title": "在线笔记",
+      "url": "../apps/note/index.html",
+      "customTile": "",
+      "urlRandomToken": true
+    },
+    "app-excel": {
+      "addressBar": false,
+      "autoRun": 0,
+      "background": false,
+      "badge": 0,
+      "desc": "在线表格",
+      "icon": {
+        "type": "img",
+        "content": "../apps/work/excel/icon.jpg"
+      },
+      "openMode": "normal",
+      "plugin": false,
+      "position": {
+        "autoOffset": true,
+        "left": true,
+        "top": true,
+        "x": "x*0.05",
+        "y": "y*0.05"
+      },
+      "version": "1.0.0",
+      "poweredBy": "罗小黑",
+      "resizable": true,
+      "single": true,
+      "size": {
+        "height": "y*0.8-80",
+        "width": "x*0.8"
+      },
+      "title": "Excel(表格处理工具)",
+      "url": "../apps/work/excel/index.html",
+      "customTile": "",
+      "urlRandomToken": true
+    },
+    "app-pdf": {
+      "addressBar": false,
+      "autoRun": 0,
+      "background": false,
+      "badge": 0,
+      "desc": "pdf阅读器",
+      "icon": {
+        "type": "img",
+        "content": "../apps/work/pdf/pdf.png"
+      },
+      "openMode": "normal",
+      "plugin": false,
+      "position": {
+        "autoOffset": true,
+        "left": true,
+        "top": true,
+        "x": "x*0.05",
+        "y": "y*0.05"
+      },
+      "version": "1.0.0",
+      "poweredBy": "罗小黑",
+      "resizable": true,
+      "single": true,
+      "size": {
+        "height": "y*0.8-80",
+        "width": "x*0.8"
+      },
+      "title": "PDF阅读器",
+      "url": "../apps/work/pdf/index.html",
+      "customTile": "",
+      "urlRandomToken": true
+    },
+    "app-pets": {
+      "addressBar": false,
+      "autoRun": 0,
+      "background": false,
+      "badge": 0,
+      "desc": "桌宠",
+      "icon": {
+        "type": "img",
+        "content": "../apps/pets/icon.png"
+      },
+      "openMode": "normal",
+      "plugin": false,
+      "position": {
+        "autoOffset": true,
+        "left": true,
+        "top": true,
+        "x": "x*0.05",
+        "y": "y*0.05"
+      },
+      "version": "1.0.0",
+      "poweredBy": "罗小黑",
+      "resizable": true,
+      "single": true,
+      "size": {
+        "height": "y*0.8-80",
+        "width": "x*0.8"
+      },
+      "title": "桌宠商城",
+      "url": "../apps/pets/index.html",
+      "customTile": "",
+      "urlRandomToken": true
+    },
+    "app-virtualbox": {
+      "addressBar": false,
+      "autoRun": 0,
+      "background": false,
+      "badge": 0,
+      "desc": "虚拟机",
+      "icon": {
+        "type": "img",
+        "content": "../apps/virtualbox/icon.png"
+      },
+      "openMode": "normal",
+      "plugin": false,
+      "position": {
+        "autoOffset": true,
+        "left": true,
+        "top": true,
+        "x": "x*0.05",
+        "y": "y*0.05"
+      },
+      "version": "1.0.0",
+      "poweredBy": "罗小黑",
+      "resizable": true,
+      "single": false,
+      "size": {
+        "height": "750",
+        "width": "1334"
+      },
+      "title": "虚拟机",
+      "url": "https://copy.sh/v86/",
+      "customTile": "",
+      "urlRandomToken": true
+    },
+    "app-vscode": {
+      "addressBar": false,
+      "autoRun": 0,
+      "background": false,
+      "badge": 0,
+      "desc": "开源的代码编辑器",
+      "icon": {
+        "type": "img",
+        "content": "../apps/vscode/icon.webp"
+      },
+      "openMode": "outer",
+      "plugin": false,
+      "position": {
+        "autoOffset": true,
+        "left": true,
+        "top": true,
+        "x": "x*0.05",
+        "y": "y*0.05"
+      },
+      "version": "1.0.0",
+      "poweredBy": "罗小黑",
+      "resizable": true,
+      "single": false,
+      "size": {
+        "height": "750",
+        "width": "1334"
+      },
+      "title": "vscode",
+      "url": "https://vscode.dev/",
+      "customTile": "",
+      "urlRandomToken": true
+    },
+    "githubproxy": {
+      "addressBar": false,
+      "autoRun": 0,
+      "background": false,
+      "badge": 0,
+      "desc": "Github代理下载",
+      "icon": {
+        "type": "img",
+        "content": "../apps/githubproxy/icon.png"
+      },
+      "openMode": "normal",
+      "plugin": false,
+      "position": {
+        "autoOffset": true,
+        "left": true,
+        "top": true,
+        "x": "x*0.05",
+        "y": "y*0.05"
+      },
+      "version": "1.0.0",
+      "poweredBy": "罗小黑",
+      "resizable": true,
+      "single": false,
+      "size": {
+        "height": "650",
+        "width": "850"
+      },
+      "title": "Github Proxy",
+      "url": "../apps/githubproxy/index.html",
+      "customTile": "",
+      "urlRandomToken": true
+    }
+  },
+  "shortcuts": [
+    {
+      "app": "lctab",
+      "title": "XTAB导航",
+      "params": {},
+      "hash": ""
+    },{
+      "app": "app-note",
+      "title": "笔记",
+      "params": {},
+      "hash": ""
+    },{
+      "app": "yl-browser",
+      "title": "浏览器",
+      "params": {},
+      "hash": ""
+    },
+    {
+      "title": "娱乐",
+      "children": [
+        {
+          "app": "app-games",
+          "title": "游戏厅",
+          "params": {},
+          "hash": ""
+        },{
+          "app": "app-music",
+          "title": "音乐",
+          "params": {},
+          "hash": ""
+        }
+      ]
+    },{
+      "title": "办公",
+      "children": [
+        {
+          "app": "app-excel",
+          "title": "Excel",
+          "params": {},
+          "hash": ""
+        },
+        {
+          "app": "app-pdf",
+          "title": "PDF",
+          "params": {},
+          "hash": ""
+        }
+      ]
+    },
+    {
+      "app": "githubproxy",
+      "title": "Github Proxy",
+      "params": {},
+      "hash": ""
+    }
+  ],
+  "tiles": [
+    {
+      "title": "系统",
+      "data": [
+       {
+          "x": 0,
+          "y": 6,
+          "w": 2,
+          "h": 2,
+          "app": "app-store",
+          "title": "应用商店",
+          "i": "91",
+          "params": {},
+          "hash": ""
+        },{
+          "x": 2,
+          "y": 6,
+          "w": 4,
+          "h": 2,
+          "app": "app-pdf",
+          "title": "PDF阅读器",
+          "i": "91",
+          "params": {},
+          "hash": ""
+        },
+        {
+          "x": 0,
+          "y": 4,
+          "w": 4,
+          "h": 2,
+          "app": "yl-system",
+          "title": "系统设置",
+          "i": "110",
+          "params": {},
+          "hash": ""
+        },
+        {
+          "x": 4,
+          "y": 4,
+          "w": 2,
+          "h": 2,
+          "app": "app-excel",
+          "title": "Excel",
+          "i": "146",
+          "params": {},
+          "hash": ""
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "w": 6,
+          "h": 4,
+          "app": "yl-app-home",
+          "title": "官网",
+          "i": "147",
+          "params": {},
+          "hash": ""
+        }
+      ]
+    }
+  ],
+  "startMenu": {
+    "width": 620,
+    "height": 494,
+    "sidebar": [
+      {
+        "app": "yl-browser",
+        "title": "浏览器",
+        "params": {},
+        "hash": ""
+      },
+      {
+        "app": "yl-system",
+        "title": "系统设置"
+      }
+    ],
+    "menu": {
+      "itemPushed-1": {
+        "app": "app-pets",
+        "title": "桌宠商城",
+        "params": {},
+        "hash": ""
+      },"itemPushed-2": {
+        "app": "app-wallpaperstore",
+        "title": "壁纸商城",
+        "params": {},
+        "hash": ""
+      },"itemPushed-3": {
+        "app": "app-store",
+        "title": "应用商城",
+        "params": {},
+        "hash": ""
+      },
+      "itemPushed-4": {
+        "app": "yl-browser",
+        "title": "浏览器",
+        "params": {},
+        "hash": ""
+      },
+      "itemPushed-5": {
+        "app": "yl-color",
+        "title": "渐变色选择器",
+        "params": {},
+        "hash": ""
+      },
+      "itemPushed-6": {
+        "app": "lc-excalidraw",
+        "title": "博思白板",
+        "params": {},
+        "hash": ""
+      },
+      "itemPushed-7": {
+        "app": "app-virtualbox",
+        "title": "虚拟机",
+        "params": {},
+        "hash": ""
+      },
+      "itemPushed-8": {
+        "app": "app-vscode",
+        "title": "Visual Studio Code",
+        "params": {},
+        "hash": ""
+      },
+      "itemPushed-100": {
+        "app": "yl-system",
+        "title": "系统设置",
+        "params": {},
+        "hash": ""
+      }
+    }
+  }
+}

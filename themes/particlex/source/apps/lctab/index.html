@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="XTAB工具导航是一个免费的在线工具集合，提供JSON格式化、HTML预览、密码生成、UUID生成、Base64转换、Emoji选择器等多种实用工具。所有功能均为纯前端实现，安全可靠。">
+    <meta name="keywords" content="在线工具,IT工具,JSON格式化,HTML预览,密码生成器,UUID生成器,Base64转换,Emoji选择器,前端工具,开发者工具">
+    <meta name="author" content="蔚蓝工具导航站">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="XTAB工具导航 - 免费在线开发工具集">
+    <meta property="og:description" content="提供多种实用的在线开发工具，包括JSON格式化、HTML预览、密码生成、UUID生成、Base64转换等，全部免费使用。">
+    <meta property="og:image" content="tools.png">
+    <meta property="og:url" content="https://your-domain.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Additional SEO Tags -->
+    <meta name="application-name" content="蔚蓝工具导航站">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="canonical" href="https://your-domain.com">
+    
+    <title>XTAB工具导航 - 免费在线开发工具集</title>
+    
+    <!-- 引入苹果字体 -->
+    <link href="https://fonts.googleapis.com/css?family=SF+Pro+Display:400,600&display=swap" rel="stylesheet">
+    <!-- 引入图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- 引入自定义CSS -->
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/index.css">
+    
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="09c0a9c3-17ec-49e2-8fd0-7064f75f6978"></script>
+</head>
+
+<body class="light-mode">
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="/">
+                <img src="assets/favicon/favicon-32x32.png" alt="XTAB">
+                XTAB
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/" class="active"><i class="fas fa-home"></i>首页</a></li>
+            <li><a href="navigation.html"><i class="fas fa-compass"></i>导航</a></li>
+        </ul>
+        <div class="nav-right">
+            <div class="search-box">
+                <input type="text" placeholder="搜索工具...">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="theme-switch">
+                <input type="checkbox" id="theme-toggle">
+                <label for="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </label>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- 装饰元素 -->
+        <div class="decoration dec-circle"></div>
+        <div class="decoration dec-dots"></div>
+        <div class="decoration dec-lines"></div>
+        
+        <!-- 页面标题 -->
+        <div class="page-header">
+            <h1>XTAB实用工具集</h1>
+            <p>为开发者和设计师提供高效易用的在线工具，提升您的工作效率</p>
+        </div>
+        
+        <!-- 通知信息 -->
+        <div class="notice">
+            <p>所有工具均在本地运行，您的数据不会上传到服务器，请放心使用！</p>
+        </div>
+        
+        <!-- 工具分类 -->
+        <div class="categories">
+            <button class="category-button active" data-category="all" style="--btn-index: 0">全部工具</button>
+            <button class="category-button" data-category="format" style="--btn-index: 1">格式化</button>
+            <button class="category-button" data-category="preview" style="--btn-index: 2">预览</button>
+            <button class="category-button" data-category="security" style="--btn-index: 3">安全</button>
+            <button class="category-button" data-category="generator" style="--btn-index: 4">生成器</button>
+            <button class="category-button" data-category="converter" style="--btn-index: 5">转换</button>
+        </div>
+        
+        <!-- 工具统计 -->
+        <div class="tools-stats">
+            <div class="stats-item">
+                <span class="stats-count">12</span>
+                <span class="stats-label">可用工具</span>
+            </div>
+            <div class="stats-item">
+                <span class="stats-count">10K+</span>
+                <span class="stats-label">月使用量</span>
+            </div>
+            <div class="stats-item">
+                <span class="stats-count">100%</span>
+                <span class="stats-label">在线运行</span>
+            </div>
+        </div>
+
+        <!-- 工具列表 -->
+        <div id="tool-list">
+            <!-- JSON格式化工具 -->
+            <a href="pages/json_formatter.html" class="tool-card" data-category="format" style="--card-index: 0">
+                <div class="icon-wrapper">
+                    <div class="icon-bg"></div>
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>JSON格式化工具</h3>
+                <p class="card-description">格式化和校验JSON数据，方便查看和编辑</p>
+                <span class="category-tag">格式化</span>
+                <span class="featured-indicator"><i class="fas fa-star"></i>热门</span>
+            </a>
+            
+            <!-- HTML预览工具 -->
+            <a href="pages/html_preview.html" class="tool-card" data-category="preview" style="--card-index: 1">
+                <div class="icon-wrapper">
+                    <div class="icon-bg"></div>
+                    <i class="fas fa-code-branch"></i>
+                </div>
+                <h3>HTML预览工具</h3>
+                <p class="card-description">实时预览HTML、CSS和JavaScript代码效果</p>
+                <span class="category-tag">预览</span>
+            </a>
+            
+            <!-- 密码生成工具 -->
+            <a href="pages/password_generation.html" class="tool-card" data-category="security" style="--card-index: 2">
+                <div class="icon-wrapper">
+                    <div class="icon-bg"></div>
+                    <i class="fas fa-key"></i>
+                </div>
+                <h3>密码生成工具</h3>
+                <p class="card-description">生成安全、强壮的随机密码</p>
+                <span class="category-tag">安全</span>
+            </a>
+            
+            <!-- UUID生成工具 -->
+            <a href="pages/uuid_generation.html" class="tool-card" data-category="generator" style="--card-index: 3">
+                <div class="icon-wrapper">
+                    <div class="icon-bg"></div>
+                    <i class="fas fa-fingerprint"></i>
+                </div>
+                <h3>UUID生成工具</h3>
+                <p class="card-description">快速生成UUID/GUID标识符</p>
+                <span class="category-tag">生成器</span>
+            </a>
+            
+            <!-- 九宫格工具 -->
+            <a href="pages/nine_grid.html" class="tool-card" data-category="grid" style="--card-index: 4">
+                <div class="icon-wrapper">
+                    <div class="icon-bg"></div>
+                    <i class="fas fa-th-large"></i>
+                </div>
+                <h3>九宫格制作工具</h3>
+                <p class="card-description">将图片切割成九宫格，适合社交媒体发布</p>
+                <span class="category-tag">图像</span>
+            </a>
+            
+            <!-- Base64转换工具 -->
+            <a href="pages/base64convert.html" class="tool-card" data-category="converter" style="--card-index: 5">
+                <div class="icon-wrapper">
+                    <div class="icon-bg"></div>
+                    <i class="fas fa-exchange-alt"></i>
+                </div>
+                <h3>Base64转换工具</h3>
+                <p class="card-description">在文本和Base64编码之间相互转换</p>
+                <span class="category-tag">转换</span>
+            </a>
+            
+            <!-- Emoji选择器 -->
+            <a href="pages/emoji_picker.html" class="tool-card" data-category="emoji" style="--card-index: 6">
+                <div class="icon-wrapper">
+                    <div class="icon-bg"></div>
+                    <i class="fas fa-face-smile"></i>
+                </div>
+                <h3>Emoji选择器</h3>
+                <p class="card-description">浏览和复制表情符号，支持搜索</p>
+                <span class="category-tag">工具</span>
+                <span class="featured-indicator"><i class="fas fa-star"></i>趣味</span>
+            </a>
+            
+            <!-- 趣味数学大冒险 -->
+            <a href="quwei.html" class="tool-card" data-category="math" style="--card-index: 7">
+                <div class="icon-wrapper">
+                    <div class="icon-bg"></div>
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>趣味数学大冒险</h3>
+                <p class="card-description">让数学学习变得有趣的互动游戏</p>
+                <span class="category-tag">游戏</span>
+            </a>
+            
+            <!-- 封面图制作 -->
+            <a href="cover_creator.html" class="tool-card" data-category="image" style="--card-index: 8">
+                <div class="icon-wrapper">
+                    <div class="icon-bg"></div>
+                    <i class="fas fa-palette"></i>
+                </div>
+                <h3>封面图制作工具</h3>
+                <p class="card-description">设计精美的文章封面和社交媒体图片</p>
+                <span class="category-tag">图像</span>
+                <span class="featured-indicator"><i class="fas fa-star"></i>新功能</span>
+            </a>
+            
+            <!-- 字幕截图生成器 -->
+            <a href="screenshot_generation.html" class="tool-card" data-category="subtitle" style="--card-index: 9">
+                <div class="icon-wrapper">
+                    <div class="icon-bg"></div>
+                    <i class="fas fa-image"></i>
+                </div>
+                <h3>字幕截图生成器</h3>
+                <p class="card-description">为图片添加字幕，轻松制作表情包</p>
+                <span class="category-tag">图像</span>
+            </a>
+            
+            <!-- 颜色选择与转换工具 -->
+            <a href="pages/color_picker.html" class="tool-card" data-category="converter" style="--card-index: 10">
+                <div class="icon-wrapper">
+                    <div class="icon-bg"></div>
+                    <i class="fas fa-palette"></i>
+                </div>
+                <h3>颜色选择与转换工具</h3>
+                <p class="card-description">选择颜色，在各种格式之间转换，生成配色方案和渐变</p>
+                <span class="category-tag">转换</span>
+                <span class="featured-indicator"><i class="fas fa-star"></i>新功能</span>
+            </a>
+            
+            <!-- 时间戳转换工具 -->
+            <a href="pages/timestamp_converter.html" class="tool-card" data-category="converter" style="--card-index: 11">
+                <div class="icon-wrapper">
+                    <div class="icon-bg"></div>
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>时间戳转换工具</h3>
+                <p class="card-description">Unix时间戳与日期时间互相转换，方便开发者进行时间处理</p>
+                <span class="category-tag">转换</span>
+                <span class="featured-indicator"><i class="fas fa-star"></i>新功能</span>
+            </a>
+        </div>
+        
+        <!-- 空状态 -->
+        <div class="empty-state">
+            <img src="images/empty-state.svg" alt="没有找到工具">
+            <h3>没有找到匹配的工具</h3>
+            <p>请尝试调整您的搜索条件或浏览其他类别</p>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+
+    <script>
+        // 主题切换
+        const themeToggle = document.getElementById('theme-toggle');
+        
+        // 检查本地存储中的主题设置
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+            themeToggle.checked = true;
+        }
+        
+        themeToggle.addEventListener('change', function() {
+            if(this.checked) {
+                document.body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.body.classList.remove('dark-mode');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+        
+        // 分类过滤
+        const categoryButtons = document.querySelectorAll('.category-button');
+        const toolCards = document.querySelectorAll('.tool-card');
+        const emptyState = document.querySelector('.empty-state');
+        
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // 移除所有按钮的active类
+                categoryButtons.forEach(btn => btn.classList.remove('active'));
+                // 为当前按钮添加active类
+                button.classList.add('active');
+                
+                const category = button.dataset.category;
+                let visibleCount = 0;
+                
+                // 根据类别过滤工具卡片
+                toolCards.forEach(card => {
+                    if (category === 'all' || card.dataset.category === category) {
+                        card.style.display = 'flex';
+                        visibleCount++;
+                        
+                        // 重新设置动画延迟
+                        const visibleIndex = Array.from(toolCards).filter(c => 
+                            c.style.display !== 'none').indexOf(card);
+                        card.style.setProperty('--card-index', visibleIndex);
+                        
+                        // 重新触发动画
+                        card.classList.remove('visible');
+                        void card.offsetWidth; // 触发重绘
+                        card.classList.add('visible');
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+                
+                // 显示或隐藏空状态
+                if (visibleCount === 0) {
+                    emptyState.style.display = 'block';
+                } else {
+                    emptyState.style.display = 'none';
+                }
+            });
+        });
+        
+        // 搜索功能
+        const searchInput = document.querySelector('.search-box input');
+        
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.toLowerCase().trim();
+            let visibleCount = 0;
+            
+            toolCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('.card-description').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // 显示或隐藏空状态
+            if (visibleCount === 0) {
+                emptyState.style.display = 'block';
+            } else {
+                emptyState.style.display = 'none';
+            }
+            
+            // 重置分类按钮状态
+            if (searchTerm === '') {
+                document.querySelector('.category-button[data-category="all"]').click();
+            } else {
+                categoryButtons.forEach(btn => btn.classList.remove('active'));
+            }
+        });
+        
+        // 卡片悬停效果
+        toolCards.forEach(card => {
+            card.addEventListener('mousemove', function(e) {
+                const rect = this.getBoundingClientRect();
+                const x = e.clientX - rect.left; //x position within the element.
+                const y = e.clientY - rect.top;  //y position within the element.
+                
+                // 设置自定义属性记录鼠标位置
+                this.style.setProperty('--mouse-x', `${x}px`);
+                this.style.setProperty('--mouse-y', `${y}px`);
+                
+                // 创建3D效果
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateY = ((x - centerX) / centerX) * 5; // 最大旋转5度
+                const rotateX = ((centerY - y) / centerY) * 5; // 最大旋转5度
+                
+                this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                // 重置变换
+                this.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+            });
+        });
+        
+        // 滚动时的动画效果
+        function checkVisibility() {
+            toolCards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+                
+                if (rect.top <= windowHeight * 0.8) {
+                    card.classList.add('visible');
+                }
+            });
+        }
+        
+        // 初始检查
+        window.addEventListener('load', checkVisibility);
+        // 滚动时检查
+        window.addEventListener('scroll', checkVisibility);
+    </script>
+    </body>
+    </html>
+    

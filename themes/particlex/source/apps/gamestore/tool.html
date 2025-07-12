@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>数据加密工具</title>
+        <script src="/js/safety/crypto-js.min.js"></script>
+        <script src="/js/common/config.js"></script>
+        <script>
+            fetch('./games_未加密.csv').then(response => response.text()).then(data => {
+                let result = CryptoJS.AES.encrypt(data, window.dataSecretKey).toString();
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(new Blob([result], { type: 'text/plain' }));
+                link.download = 'games.txt';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            })
+        </script>
+    </head>
+</html>

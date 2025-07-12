@@ -1,0 +1,438 @@
+[
+    {
+        "name": "鬼刀",
+        "cover": "https://www.bing.com/th?id=OIP.Dgah6k9oAwFM_-CpBrM2NgHaD-&w=183&h=185&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2",
+        "links": {
+            "哔哩哔哩漫画": "https://manga.bilibili.com/detail/mc29481"
+        },
+        "categories": "国漫",
+        "labels": ["奇幻"],
+        "author": "作者A",
+        "description": "xxxxx简介xxxxx简介xxxxx简介xxxxx简介xxxxx简介",
+        "rating": 4.9,
+        "lastUpdate": "未知",
+        "latestChapter": "43 话",
+        "status": "连载"
+    },
+    {
+        "name": "我独自升级",
+        "cover": "https://static-tw.baozimh.com/cover/woduzishengji-duburedicestudio.jpg?w=285&h=375&q=100",
+        "links": {
+            "包子漫画": "https://cn.baozimh.com/comic/woduzishengji-duburedicestudio_gi486f"
+        },
+        "categories": "韩漫",
+        "labels": ["召唤","死灵法师"],
+        "author": "作者A",
+        "description": "xxxxx简介xxxxx简介xxxxx简介xxxxx简介xxxxx简介",
+        "rating": 4.9,
+        "lastUpdate": "未知",
+        "latestChapter": "《与神一同升级》即将上线！",
+        "status": "完结"
+    },
+    {
+        "name": "死灵法师:亡灵支配者",
+        "cover": "https://pic.rmb.bdstatic.com/bjh/down/3db7a880ad5feb5e6ca979a667ec1bfe.jpeg",
+        "links": {
+            "包子漫画": "https://cn.baozimh.com/comic/silingfashiwanglingzhipeizhe-kimkyoungyeoljjjkimdongjun_netlj6"
+        },
+        "categories": "韩漫",
+        "labels": ["召唤","死灵法师"],
+        "author": "作者A",
+        "description": "xxxxx简介xxxxx简介xxxxx简介xxxxx简介xxxxx简介",
+        "rating": 4.9,
+        "lastUpdate": "(2024年07月06日 更新)",
+        "latestChapter": "[第136话] B市大捷 -5",
+        "status": "完结"
+    },
+    {
+        "name": "全知读者视角",
+        "cover": "https://static-tw.baozimh.com/cover/quanzhiduzheshijiao-sleepcsingsyong.jpg?w=285&h=375&q=100",
+        "links": {
+            "xx漫画": "https://www.comemh.com/kanmanhua/quanzhiduzheshijiao/"
+        },
+        "categories": "韩漫",
+        "labels": ["异世界", "冒险"],
+        "author": "",
+        "description": "",
+        "rating": "",
+        "lastUpdate": "",
+        "latestChapter": "",
+        "status": "连载"
+    },
+    {
+        "name": "妹子与科学",
+        "cover": "https://static-tw.baozimh.com/cover/meiziyukexue-zhazhushidede.jpg?w=285&h=375&q=100",
+        "links": {
+            "xx漫画": "https://cn.baozimh.com/comic/meiziyukexue-zhazhushidede"
+        },
+        "categories": "国漫",
+        "labels": ["异世界", "冒险"],
+        "author": "",
+        "description": "",
+        "rating": "",
+        "lastUpdate": "",
+        "latestChapter": "",
+        "status": "完结"
+    },
+    {
+        "name": "虫穴-系列",
+        "cover": "https://static-tw.baozimh.com/cover/chongxue-jinguisen.jpg?w=285&h=375&q=100",
+        "links": {
+            "xx漫画": "https://cn.baozimh.com/comic/chongxue-jinguisen"
+        },
+        "categories": "韩漫",
+        "labels": ["末世"],
+        "author": "",
+        "description": "",
+        "rating": "",
+        "lastUpdate": "",
+        "latestChapter": "",
+        "status": "连载"
+    },
+    {
+        "name": "医统-天下",
+        "cover": "https://static-tw.baozimh.com/cover/yitongtianxia-duanyanmuou.jpg?w=285&h=375&q=100",
+        "links": {
+            "xx漫画": "https://cn.baozimh.com/comic/yitongtianxia-duanyanmuou"
+        },
+        "categories": "国漫",
+        "labels": [],
+        "author": "",
+        "description": "",
+        "rating": "",
+        "lastUpdate": "",
+        "latestChapter": "",
+        "status": "完结"
+    },
+    {
+        "name": "医统-乱世",
+        "cover": "https://static-tw.baozimh.com/cover/yitongluanshi-muou.jpg?w=285&h=375&q=100",
+        "links": {
+            "xx漫画": "https://cn.baozimh.com/comic/yitongluanshi-duanyanmuou2gefeiwu"
+        },
+        "categories": "国漫",
+        "labels": [],
+        "author": "",
+        "description": "",
+        "rating": "",
+        "lastUpdate": "",
+        "latestChapter": "",
+        "status": "连载"
+    },
+    {
+        "name": "偷星九月天",
+        "cover": "https://static-tw.baozimh.com/cover/touxingjiuyuetian-zhouhongbingongzuoshi.jpg?w=285&h=375&q=100",
+        "links": {
+            "xx漫画": "https://cn.baozimh.com/comic/touxingjiuyuetian-zhouhongbingongzuoshi"
+        },
+        "categories": "国漫",
+        "labels": [],
+        "author": "",
+        "description": "",
+        "rating": "",
+        "lastUpdate": "",
+        "latestChapter": "",
+        "status": "完结"
+    },
+    {
+        "name": "与死亡同行：从鱼人地下城开始",
+        "cover": "https://static-tw.baozimh.com/cover/yusiwangtongxingcongyurendixiachengkaishi-yinhechuangxiang.jpg?w=285&h=375&q=100",
+        "links": {
+            "xx漫画": "https://cn.baozimh.com/comic/yusiwangtongxingcongyurendixiachengkaishi-yinhechuangxiang"
+        },
+        "categories": "韩漫",
+        "labels": [],
+        "author": "",
+        "description": "",
+        "rating": "",
+        "lastUpdate": "",
+        "latestChapter": "",
+        "status": "连载"
+    },
+    {
+        "name": "末世英雄传说",
+        "cover": "https://static-tw.baozimh.com/cover/moshiyingxiongchuanshuo-ddartquancanxukenaz.jpg?w=285&h=375&q=100",
+        "links": {
+            "xx漫画": "https://cn.baozimh.com/comic/moshiyingxiongchuanshuo-ddartquancanxukenaz"
+        },
+        "categories": "国漫",
+        "labels": ["末世"],
+        "author": "",
+        "description": "",
+        "rating": "",
+        "lastUpdate": "",
+        "latestChapter": "",
+        "status": "完结"
+    },
+    {
+        "name": "末世人间道",
+        "cover": "https://static-tw.baozimh.com/cover/moshirenjiandao-wumantiancaoruibo.jpg?w=285&h=375&q=100",
+        "links": {
+            "xx漫画": "https://www.comemh.com/kanmanhua/15303/"
+        },
+        "categories": "国漫",
+        "labels": ["末世"],
+        "author": "",
+        "description": "",
+        "rating": "",
+        "lastUpdate": "",
+        "latestChapter": "",
+        "status": "完结"
+    },
+    {
+        "name": "末日危机",
+        "cover": "https://static-tw.baozimh.com/cover/moriweiji-parkchanggeunparkchanggeun.jpg?w=285&h=375&q=100",
+        "links": {
+            "xx漫画": "https://cn.baozimh.com/comic/moriweiji-parkchanggeunparkchanggeun"
+        },
+        "categories": "韩漫",
+        "labels": ["末世"],
+        "author": "",
+        "description": "",
+        "rating": "",
+        "lastUpdate": "",
+        "latestChapter": "",
+        "status": "连载"
+    },
+    {
+        "name": "尸界",
+        "cover": "https://static-tw.baozimh.com/cover/shijie-bianhuinorth0023.jpg?w=285&h=375&q=100",
+        "links": {
+            "xx漫画": "https://cn.baozimh.com/comic/shijie-bianhuinorth0023"
+        },
+        "categories": "国漫",
+        "labels": ["末世"],
+        "author": "",
+        "description": "",
+        "rating": "",
+        "lastUpdate": "",
+        "latestChapter": "",
+        "status": "连载"
+    },
+    {
+        "name": "末世凡人",
+        "cover": "https://static-tw.baozimh.com/cover/moshifanren-liangqigongchang.jpg?w=285&h=375&q=100",
+        "links": {
+            "xx漫画": "https://cn.baozimh.com/comic/moshifanren-liangqigongchang"
+        },
+        "categories": "国漫",
+        "labels": ["末世"],
+        "author": "",
+        "description": "",
+        "rating": "",
+        "lastUpdate": "",
+        "latestChapter": "",
+        "status": "连载"
+    },
+    {
+        "name": "末日孢子",
+        "cover": "https://static-tw.baozimh.com/cover/moribaozi-yanqimen.jpg?w=285&h=375&q=100",
+        "links": {
+            "xx漫画": "https://cn.baozimh.com/comic/moribaozi-yanqimen"
+        },
+        "categories": "国漫",
+        "labels": ["末世"],
+        "author": "",
+        "description": "",
+        "rating": "",
+        "lastUpdate": "",
+        "latestChapter": "",
+        "status": "完结"
+    },
+    {
+        "name": "从末世崛起",
+        "cover": "https://image1.dingmanhua.com/mh/9763a0f9012e4702a4689b67b38fee18/cover.webp",
+        "links": {
+            "xx漫画": "https://www.dingmanhua.com/comic/1732.html/"
+        },
+        "categories": "国漫",
+        "labels": ["末世"],
+        "author": "",
+        "description": "",
+        "rating": "",
+        "lastUpdate": "",
+        "latestChapter": "",
+        "status": "连载"
+    },
+    {
+        "name": "银之守墓人",
+        "cover": "https://static-tw.baozimh.com/cover/yinzhishoumuren-liangdianshifendongman.jpg?w=285&h=375&q=100",
+        "links": {
+            "xx漫画": "https://www.dingmanhua.com/comic/1265.html/"
+        },
+        "categories": "国漫",
+        "labels": ["游戏"],
+        "author": "",
+        "description": "",
+        "rating": "",
+        "lastUpdate": "",
+        "latestChapter": "",
+        "status": "完结"
+    },
+    {
+        "name": "白垩纪",
+        "cover": "https://static-tw.baozimh.com/cover/baieji-qiasitedongman.jpg?w=285&h=375&q=100",
+        "links": {
+            "xx漫画": "https://cn.baozimh.com/comic/baieji-qiasitedongman"
+        },
+        "categories": "国漫",
+        "labels": ["异世界"],
+        "author": "",
+        "description": "",
+        "rating": "",
+        "lastUpdate": "",
+        "latestChapter": "",
+        "status": "连载"
+    },
+    {
+        "name": "驭灵师",
+        "cover": "https://static-tw.baozimh.com/cover/yulingshi-shidaimanwang.jpg?w=285&h=375&q=100",
+        "links": {
+            "xx漫画": "https://cn.baozimh.com/comic/yulingshi-shidaimanwang2"
+        },
+        "categories": "国漫",
+        "labels": ["玄幻"],
+        "author": "",
+        "description": "",
+        "rating": "",
+        "lastUpdate": "",
+        "latestChapter": "",
+        "status": "连载"
+    },
+    {
+        "name": "我只想安静的打游戏",
+        "cover": "https://image1.dingmanhua.com/mh/bae59ba16c1c4c7fabc1a409803c06d6/cover.webp",
+        "links": {
+            "xx漫画": "https://www.dingmanhua.com/comic/700.html/"
+        },
+        "categories": "国漫",
+        "labels": ["末世"],
+        "author": "",
+        "description": "",
+        "rating": "",
+        "lastUpdate": "",
+        "latestChapter": "",
+        "status": "连载"
+    },
+    {
+        "name": "武炼巅峰",
+        "cover": "https://static-tw.baozimh.com/cover/wuliandianfeng-pikapi.jpg?w=285&h=375&q=100",
+        "links": {
+            "xx漫画": "https://cn.baozimh.com/comic/wuliandianfeng-pikapi_lav8od"
+        },
+        "categories": "国漫",
+        "labels": ["玄幻"],
+        "author": "",
+        "description": "",
+        "rating": "",
+        "lastUpdate": "",
+        "latestChapter": "",
+        "status": "连载"
+    },
+    {
+        "name": "死灵法师！我即是天灾-53",
+        "cover": "https://image1.dingmanhua.com/mh/5f38c01de1e64274a0c76a50865dded7/cover.webp",
+        "links": {
+            "xx漫画": "https://www.dingmanhua.com/comic/1082.html/"
+        },
+        "categories": "国漫",
+        "labels": ["召唤"],
+        "author": "",
+        "description": "",
+        "rating": "",
+        "lastUpdate": "",
+        "latestChapter": "",
+        "status": "连载"
+    },
+    {
+        "name": "角色是水母的我依然超神",
+        "cover": "https://image1.dingmanhua.com/mh/2c82a48a04b346f0bb851c20d541c162/cover.webp",
+        "links": {
+            "xx漫画": "https://www.dingmanhua.com/comic/1460.html/"
+        },
+        "categories": "国漫",
+        "labels": ["游戏"],
+        "author": "",
+        "description": "",
+        "rating": "",
+        "lastUpdate": "",
+        "latestChapter": "",
+        "status": "连载"
+    },
+    {
+        "name": "生存学概率",
+        "cover": "https://static-tw.baozimh.com/cover/shengcunxuegailun-mrquokkaharustudiokhit.jpg?w=285&h=375&q=100",
+        "links": {
+            "xx漫画": "https://cn.baozimh.com/comic/shengcunxuegailun-mrquokkaharustudiokhit"
+        },
+        "categories": "国漫",
+        "labels": ["冒险"],
+        "author": "",
+        "description": "",
+        "rating": "",
+        "lastUpdate": "",
+        "latestChapter": "",
+        "status": "连载"
+    },
+    {
+        "name": "回头是岸",
+        "cover": "https://static-tw.baozimh.com/cover/huitoushian-wumantiancaoruibo.jpg?w=285&h=375&q=100",
+        "links": {
+            "xx漫画": "https://cn.baozimh.com/comic/huitoushian-wumantiancaoruibo"
+        },
+        "categories": "国漫",
+        "labels": ["末世"],
+        "author": "",
+        "description": "",
+        "rating": "",
+        "lastUpdate": "",
+        "latestChapter": "",
+        "status": "连载"
+    },
+    {
+        "name": "灭亡之后的世界",
+        "cover": "https://image1.dingmanhua.com/mh/a2d574c531e04be39b361279c1f6320b/cover.webp",
+        "links": {
+            "xx漫画": "https://www.dingmanhua.com/comic/521.html/"
+        },
+        "categories": "韩漫",
+        "labels": [],
+        "author": "",
+        "description": "",
+        "rating": "",
+        "lastUpdate": "",
+        "latestChapter": "",
+        "status": "连载"
+    },
+    {
+        "name": "骸骨王座",
+        "cover": "https://static-tw.baozimh.com/cover/haiguwangzuo-cartoonlife.jpg?w=285&h=375&q=100",
+        "links": {
+            "xx漫画": "https://cn.baozimh.com/comic/haiguwangzuo-cartoonlife_o4589z"
+        },
+        "categories": "韩漫",
+        "labels": [],
+        "author": "",
+        "description": "",
+        "rating": "",
+        "lastUpdate": "",
+        "latestChapter": "",
+        "status": "完结"
+    },
+    {
+        "name": "梦境毁灭Dreamcide",
+        "cover": "https://static-tw.baozimh.com/cover/mengjinghuimiedreamcide-hkbooks.jpg?w=285&h=375&q=100",
+        "links": {
+            "xx漫画": "https://cn.baozimh.com/comic/mengjinghuimiedreamcide-hkbooks"
+        },
+        "categories": "国漫",
+        "labels": ["末世"],
+        "author": "",
+        "description": "",
+        "rating": "",
+        "lastUpdate": "",
+        "latestChapter": "",
+        "status": "完结"
+    }
+
+]
