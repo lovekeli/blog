@@ -11,7 +11,7 @@ let  category = 'all';
 function showCategory(category) {
     const mainContent = document.getElementById('main-content');
     mainContent.innerHTML = '';
-    category=category;
+    this.category=category;
     // filteredProducts = category === 'all' ? products : products.filter(product => product[6] === category);
     // allPageCount = Math.ceil(filteredProducts.length / perPage);
     currentPage = 1;
@@ -53,7 +53,8 @@ function openModal(idx) {
     document.getElementById('modal-title').innerText = currentproduct['名字'];
     document.getElementById('modal-description').innerText = currentproduct['描述'];
     document.getElementById('product-modal').style.display = 'block';
-    //document.getElementById('downgame').style.display = currentproduct.category == 'pc' ? 'block' : 'none';
+    document.getElementById('playgame').style.display = currentproduct['下载'] ? 'none' : 'block';
+    document.getElementById('downgame').style.display = currentproduct['下载'] ? 'block' : 'none';
     document.getElementById('modal-image').src = currentproduct['封面'];
     document.getElementById('downgame').removeEventListener('click',downloadgame);
     document.getElementById('downgame').addEventListener('click',downloadgame);
@@ -69,7 +70,7 @@ function showPlayHistory(){
     }
 }
 function downloadgame() {
-    window.open(currentproduct[4]);
+    window.open(currentproduct['地址']);
 }
 
 function closeModal() {
@@ -128,7 +129,7 @@ function initStore() {
             // products = CSV.parse(CryptoJS.AES.decrypt(data, window.dataSecretKey).toString(CryptoJS.enc.Utf8)).slice(1);
             // let gameCount=products.length;
             let category=data.category;
-            let categoryDOM=dockument.getElementById('categories');
+            let categoryDOM=document.getElementById('categories');
             for(let i=0;i<category.length;i++){
                 let categoryItem=document.createElement('li');
                 categoryItem.innerText=category[i];
@@ -137,6 +138,12 @@ function initStore() {
                     showCategory(category[i]);
                 });
             }
+            let historyplay=document.createElement('li');
+            historyplay.innerText='游玩记录';
+            historyplay.addEventListener('click',function(){
+                showPlayHistory();
+            });
+            categoryDOM.appendChild(historyplay);
             let gameCount=data.gamecount;
             const iframes = parent.document.querySelectorAll('iframe');
             iframes.forEach(iframe => {
