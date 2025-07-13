@@ -6,7 +6,7 @@ avatar: ../img/head.jpeg
 
 # Home page background image
 background:
-    - ../images/background.jpg
+    - https://images.lovekeli.uk/%E5%8D%9A%E5%AE%A2%E4%B8%93%E7%94%A8/background1.png
 
 # Loading image
 loading: ../images/loading.gif

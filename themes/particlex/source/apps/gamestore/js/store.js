@@ -50,11 +50,11 @@ function displayProducts(products) {
 }
 function openModal(idx) {
     currentproduct = filteredProducts[idx];
-    document.getElementById('modal-title').innerText = currentproduct[1];
-    document.getElementById('modal-description').innerText = currentproduct[5];
+    document.getElementById('modal-title').innerText = currentproduct['名字'];
+    document.getElementById('modal-description').innerText = currentproduct['描述'];
     document.getElementById('product-modal').style.display = 'block';
     //document.getElementById('downgame').style.display = currentproduct.category == 'pc' ? 'block' : 'none';
-    document.getElementById('modal-image').src = currentproduct[3];
+    document.getElementById('modal-image').src = currentproduct['封面'];
     document.getElementById('downgame').removeEventListener('click',downloadgame);
     document.getElementById('downgame').addEventListener('click',downloadgame);
 }
@@ -107,7 +107,7 @@ function playgame() {
     app['image'] = currentproduct['封面'];
     app['public'] = false;
     app['openInNewWindow'] = false;
-    app['canResizable'] = false;
+    app['canResizable'] = true;
     let msg = [];
     msg['event'] = 'rungame';
     msg['data'] = app;

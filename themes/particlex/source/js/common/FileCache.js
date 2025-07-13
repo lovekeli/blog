@@ -23,7 +23,7 @@ class FileCache {
             };
 
             request.onerror = (event) => {
-                console.error('IndexedDB初始化失败:', event.target.error);
+               // console.error('IndexedDB初始化失败:', event.target.error);
                 reject(event.target.error);
             };
         });
@@ -41,7 +41,7 @@ class FileCache {
             };
 
             request.onerror = () => {
-                console.error('获取缓存失败:', request.error);
+                //console.error('获取缓存失败:', request.error);
                 reject(request.error);
             };
         });
@@ -63,7 +63,7 @@ class FileCache {
             };
 
             request.onerror = () => {
-                console.error('保存缓存失败:', request.error);
+                //console.error('保存缓存失败:', request.error);
                 reject(request.error);
             };
         });
@@ -74,12 +74,12 @@ class FileCache {
         // 先检查缓存
         const cachedData = await this.getFromCache(url);
         if (cachedData) {
-            console.log(`从缓存获取: ${url}`);
+           // console.log(`从缓存获取: ${url}`);
             return cachedData;
         }
 
         // 缓存不存在则下载
-        console.log(`开始下载: ${url}`);
+       // console.log(`开始下载: ${url}`);
         const response = await fetch(url);
         if (!response.ok) {
             throw new Error(`下载失败: ${response.statusText}`);
@@ -90,7 +90,7 @@ class FileCache {
 
         // 保存到缓存
         await this.saveToCache(url, arrayBuffer);
-        console.log(`已缓存: ${url}`);
+        //console.log(`已缓存: ${url}`);
 
         return arrayBuffer;
     }
@@ -112,7 +112,7 @@ class FileCache {
                     }
                     cursor.continue();
                 } else {
-                    console.log(`清理了${deletedCount}个过期缓存`);
+                    //console.log(`清理了${deletedCount}个过期缓存`);
                     resolve(deletedCount);
                 }
             };
