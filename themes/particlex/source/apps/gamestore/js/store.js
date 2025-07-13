@@ -127,6 +127,16 @@ function initStore() {
             // 处理解析后的 JSON 数据
             // products = CSV.parse(CryptoJS.AES.decrypt(data, window.dataSecretKey).toString(CryptoJS.enc.Utf8)).slice(1);
             // let gameCount=products.length;
+            let category=data.category;
+            let categoryDOM=dockument.getElementById('categories');
+            for(let i=0;i<category.length;i++){
+                let categoryItem=document.createElement('li');
+                categoryItem.innerText=category[i];
+                categoryDOM.appendChild(categoryItem);
+                categoryItem.addEventListener('click',function(){
+                    showCategory(category[i]);
+                });
+            }
             let gameCount=data.gamecount;
             const iframes = parent.document.querySelectorAll('iframe');
             iframes.forEach(iframe => {
