@@ -25,10 +25,10 @@ function applyWallpaper(idx)
         let video=wallpaperDOMs[i].getElementsByTagName('video')[0];
         let btn=wallpaperDOMs[i].getElementsByClassName('apply-button')[0];
         if(img){
-            btn.textContent=img.src==renderWallpapers[idx][1]?'应用中':'应用';
+            btn.textContent=img.src==renderWallpapers[idx]['封面']?'应用中':'应用';
         }
         if(video){
-            btn.textContent=video.src==renderWallpapers[idx][1]?'应用中':'应用';
+            btn.textContent=video.src==renderWallpapers[idx]['封面']?'应用中':'应用';
         }
     }
 }
