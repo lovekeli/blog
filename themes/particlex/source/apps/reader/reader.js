@@ -237,3 +237,9 @@ const params = new URLSearchParams(location.search)
 const url = params.get('url')
 if (url) open(url).catch(e => console.error(e))
 else dropTarget.style.visibility = 'visible'
+
+let btnOpenBookUrl=document.getElementById('bookUrlButton');
+btnOpenBookUrl.addEventListener('click', function() {
+    let bookUrl=document.getElementById('inputBookUrl').value;
+    if(bookUrl) open(bookUrl).catch(e => console.error(e));
+});
