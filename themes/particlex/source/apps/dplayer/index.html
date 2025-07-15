@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>DPlayer</title>
+    <script src="./DPlayer.min.js"></script>
+    <link rel="stylesheet" href="./DPlayer.min.css">
+</head>
+
+<body>
+    <div id="dplayer"></div>
+    <script>
+        const dp = new DPlayer({
+            container: document.getElementById('dplayer'),
+            video: {
+                url: 'https://vip.123pan.cn/1819440530/homepage/wallpapers/动态/约会大作战/1.mp4',
+                pic: 'https://cn.bing.com/images/search?view=detailV2&ccid=LyQKVV0w&id=3133D3F1D2A436DC9DB9FB6CF8AC37682E8F2399&thid=OIP.LyQKVV0wn47sTLsH9C07bgHaEo&mediaurl=https%3a%2f%2fts1.tc.mm.bing.net%2fth%2fid%2fR-C.2f240a555d309f8eec4cbb07f42d3b6e%3frik%3dmSOPLmg3rPhs%252bw%26riu%3dhttp%253a%252f%252fp5.qhimg.com%252ft01c993e8dfb600ff5e.jpg%253fsize%253d1097x686%26ehk%3dRzntLPTxgDdoHh3hXElu%252bbTw%252fdOdWsVzr7Edr39XcVY%253d%26risl%3d%26pid%3dImgRaw%26r%3d0&exph=686&expw=1097&q=%e7%ba%a6%e4%bc%9a%e5%a4%a7%e4%bd%9c%e6%88%98&simid=607997581612883012&FORM=IRPRST&ck=47A9844EB27D64A4597679BE751C647B&selectedIndex=1&itb=0'
+            },
+            autoplay: true,
+            theme: '#FADFA3',
+            loop: true,
+            lang: 'zh-cn',
+            screenshot: true,
+            hotkey: true,
+            preloadTime: 10,
+            volume: 0.7,
+            mutex: true
+        });
+    </script>
+</body>
+
+</html>
