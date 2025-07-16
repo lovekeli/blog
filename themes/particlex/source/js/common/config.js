@@ -1,5 +1,5 @@
 window.config={
-    server:'https://localhost', //http://localhost:4000 https://onlylovekeli.cn
+    server:'https://onlylovekeli.cn', //http://localhost:4000 https://onlylovekeli.cn
     assetDomain:'/assets/', //资源域名
     live2dconfig:'https://pub-0d3c71ba5cd444d1aa5d8c8c085d7706.r2.dev/live2d/list.json', //live2d模型配置
     live2dmodels:'https://pub-0d3c71ba5cd444d1aa5d8c8c085d7706.r2.dev/live2d', //live2d模型路径
