@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let filteredApps = [];
     let totalPages = 0;
 
-    fetch(window.config.server+'/db/getAppStore')
+    fetch(window.config.server+'/api/getAppStore')
         .then(response => response.json())
         .then(data => {
             let apps=data.data;

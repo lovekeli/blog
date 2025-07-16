@@ -52,7 +52,7 @@ function displayWallpapers(tag = '全部') {
     // const endIndex = startIndex + wallpapersPerPage;
     // const wallpapersToDisplay = filteredWallpapers.slice(startIndex, endIndex);
     //currentPage=1;
-    fetch(window.config.server + '/db/getImg?page=' + currentPage + '&count=' + wallpapersPerPage + '&tag=' + tag,{
+    fetch(window.config.server + '/api/getImg?page=' + currentPage + '&count=' + wallpapersPerPage + '&tag=' + tag,{
         method: 'GET',
         credentials: 'include',
     }).then(response => {

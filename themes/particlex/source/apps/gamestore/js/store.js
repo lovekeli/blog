@@ -16,7 +16,7 @@ function showCategory(category) {
     // allPageCount = Math.ceil(filteredProducts.length / perPage);
     currentPage = 1;
     // displayProducts(filteredProducts.slice(0, perPage));
-    fetch(window.config.server+'/db/getGameList?page='+currentPage+'&count='+perPage+'&category='+category).then(res => res.json(),{
+    fetch(window.config.server+'/api/getGameList?page='+currentPage+'&count='+perPage+'&category='+category).then(res => res.json(),{
         method: 'GET',
         credentials: 'include',
     }).then(data => { 
