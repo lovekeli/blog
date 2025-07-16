@@ -52,7 +52,10 @@ function displayWallpapers(tag = '全部') {
     // const endIndex = startIndex + wallpapersPerPage;
     // const wallpapersToDisplay = filteredWallpapers.slice(startIndex, endIndex);
     //currentPage=1;
-    fetch(window.config.server + '/db/getImg?page=' + currentPage + '&count=' + wallpapersPerPage + '&tag=' + tag).then(response => {
+    fetch(window.config.server + '/db/getImg?page=' + currentPage + '&count=' + wallpapersPerPage + '&tag=' + tag,{
+        method: 'GET',
+        credentials: 'include',
+    }).then(response => {
         // 检查响应状态是否为 200-299
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
