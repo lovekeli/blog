@@ -120,7 +120,7 @@ function playgame() {
 }
 // 初始化显示所有商品
 function initStore() {
-    fetch(window.config.server+'/db/getGameList?page='+currentPage+'&count='+perPage+'&category=all').then(response => {
+    fetch(window.config.server+'/api/getGameList?page='+currentPage+'&count='+perPage+'&category=all').then(response => {
         // 检查响应状态是否为 200-299
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
@@ -172,7 +172,7 @@ content.addEventListener('scroll', () => {
     if (clientHeight + scrollTop >= scrollHeight) {
         currentPage++;
         currentPage = Math.min(currentPage, allPageCount);
-        fetch(window.config.server + '/db/getGameList?page=' + currentPage + '&count=' + perPage+'&category='+category).then(response => {
+        fetch(window.config.server + '/api/getGameList?page=' + currentPage + '&count=' + perPage+'&category='+category).then(response => {
             // 检查响应状态是否为 200-299
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
