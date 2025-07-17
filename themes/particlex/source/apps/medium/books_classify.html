@@ -2,34 +2,102 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>小说&书籍</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>壹世界</title>
+    <meta name="description" content="漫画网站-收集网络上题材好、画风好的漫画">
+    <meta name="keywords" content="免费漫画,漫画收藏,优质漫画,国漫,韩漫">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">  
+    <link rel="stylesheet" href="./assets/css/home.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/common.css">
 </head>
 <body>
-    <h1>小说&书籍 汇总</h1>
+    <!-- 导航栏模块 -->
+    <nav class="navbar sticky-top navbar-expand-md bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand" href="./index.html">
+            <img src="./favicon.ico" alt="logo" width="28" height="28" style="border-radius: 5px;">
+            壹世界之旅
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item px-2">
+                <a class="nav-link active" aria-current="page" href="#">首页</a>
+              </li>
+              <li class="nav-item px-2 dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  分类
+                </a>
+                <ul class="dropdown-menu" style="min-width: auto;">
+                  <li><a class="dropdown-item" href="#">漫画</a></li>
+                  <li><a class="dropdown-item" href="#">动画</a></li>
+                  <li><a class="dropdown-item" href="#">电影</a></li>
+                  <li><a class="dropdown-item" href="#">视频</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">其他内容</a></li>
+                </ul>
+              </li>
+              <!-- <li class="nav-item px-2">
+                <a class="nav-link" href="#">Link</a>
+              </li> -->
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="输入关键字" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit" style="white-space: nowrap;">搜索</button>
+            </form>
+          </div>
+        </div>
+      </nav>
 
-    <h2>学习类书籍</h2>
-    <ul>
-        <li>《nodejs开发指南》 - <a href="cnodejs.org">node.js中文社区</a></li>
-    </ul>
+
+    <!-- 分类模块，还没写 -->
+    <div class="classify container" style="margin: 20px auto;">
+      <div class="content-box" aria-label="一个大内容块">
+        <div class="items-box" style="padding: 10px;" aria-label="大内容块的卡片盒子">
+          <div class="catagory-content" style="width: 100%;margin-bottom: 10px;">
+            <span>分类：</span>
+            <a href="#" class="btn btn-sm btn-outline-danger active">全部</a>
+            <a href="#" class="btn btn-sm btn-outline-danger">国漫</a>
+            <a href="#" class="btn btn-sm btn-outline-danger">日漫</a>
+            <a href="#" class="btn btn-sm btn-outline-danger">其他</a>
+          </div>
+          <div class="tag-content" style="width: 100%;margin-bottom: 10px;">
+            <span>标签：</span>
+            <a href="#" class="btn btn-sm btn-outline-danger active">奇幻</a>
+            <a href="#" class="btn btn-sm btn-outline-danger">召唤</a>
+            <a href="#" class="btn btn-sm btn-outline-danger">异世界</a>
+            <a href="#" class="btn btn-sm btn-outline-danger">冒险</a>
+            <a href="#" class="btn btn-sm btn-outline-danger">末世</a>
+            <a href="#" class="btn btn-sm btn-outline-danger">丧失</a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
 
 
-    <h2>小说</h2>
-    <ul>
-        <li><a href="https://www.kbzhan.com/longzu1/index.html">龙族Ⅰ·火之晨曦 - 江南</a></li>
-        <li><a href="https://www.kbzhan.com/piaomiaolu/index.html">九州缥缈录·系列- 江南</a></li>
-        <li><a href="https://www.kbzhan.com/doupo/index.html">斗破苍穹 - 天蚕土豆，玄幻</a></li>
-        <li><a href="https://www.kbzhan.com/xiuzhen/index.html">修真四万年 - 科幻背景的修真小说</a></li>
-        <li><a href="https://www.kbzhan.com/wanmei/index.html">完美世界 - 辰东</a></li>
-        <li><a href="https://www.kbzhan.com/yashe/index.html">哑舍</a></li>
-        <li>查理九世</li>
-        <li>淘气包马小跳</li>
-    </ul>
 
-    <h2>兴趣阅读</h2>
-    <ul>
-        <li>小米创业思考 + 一往无前 + 生生不息 -- 在读中</li>
-        <li>奇器图说</li>
-    </ul>
+    <!-- 漫画卡片大盒子 -->
+    <div class="container">
+      <!-- 第一块大盒子：漫画 -->
+      <div class="content-box" aria-label="一个大内容块">
+          <div class="catalog-head" aria-label="大内容块的分类名称">
+              <div class="catalog-title"><span class="title-style"></span>漫画</div>
+          </div>
+          <div class="items-box manga-box" aria-label="大内容块的卡片盒子">
+              <!-- 卡片的 html 结构，从json获取数据，使用JavaScript动态渲染 -->
+
+          </div>
+      </div>
+    </div>
+
+
+    <!-- 底部模块 footrt -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>

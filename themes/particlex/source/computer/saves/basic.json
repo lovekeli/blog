@@ -722,6 +722,38 @@
       "url": "../apps/reader/index.html",
       "customTile": "",
       "urlRandomToken": true
+    },
+    "medium": {
+      "addressBar": false,
+      "autoRun": 0,
+      "background": false,
+      "badge": 0,
+      "desc": "亿达国际城",
+      "icon": {
+        "type": "img",
+        "content": "../apps/medium/icon.png"
+      },
+      "openMode": "normal",
+      "plugin": false,
+      "position": {
+        "autoOffset": true,
+        "left": true,
+        "top": true,
+        "x": "x*0.05",
+        "y": "y*0.05"
+      },
+      "version": "1.0.0",
+      "poweredBy": "罗小黑",
+      "resizable": true,
+      "single": false,
+      "size": {
+        "height": "650",
+        "width": "850"
+      },
+      "title": "亿达国际",
+      "url": "../apps/medium/index.html",
+      "customTile": "",
+      "urlRandomToken": true
     }
   },
   "shortcuts": [
@@ -752,6 +784,11 @@
         },{
           "app": "app-music",
           "title": "音乐",
+          "params": {},
+          "hash": ""
+        },{
+          "app": "medium",
+          "title": "亿达国际城",
           "params": {},
           "hash": ""
         }
