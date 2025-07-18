@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="./assets/css/test.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/common.css">
+    <script src="../../js/common/config.js"></script>
+    <script src="./js/home.js"></script>
 </head>
 <body>
     <!-- 顶部导航栏，用了Bootstrap5.这里sticky-top不会覆盖。可以用fixed-top覆盖轮播图，再来个bg-body-transparent -->
@@ -45,10 +47,10 @@
                 <a class="nav-link" href="#">Link</a>
               </li> -->
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="输入关键字" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit" style="white-space: nowrap;">搜索</button>
-            </form>
+            <div class="d-flex" role="search">
+              <input id="inputSearch" class="form-control me-2" type="search" placeholder="输入关键字" aria-label="Search">
+              <button id="btnSearch" class="btn btn-outline-success" style="white-space: nowrap;">搜索</button>
+            </div>
           </div>
         </div>
     </nav>
@@ -416,30 +418,30 @@
         </div>
     </div> -->
     
-    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="./js/bootstrap.bundle.min.js"></script> -->
     <script>
-        // Toasts相关功能
-        const toastTrigger = document.getElementById('liveToastBtn')
-        const toastLiveExample = document.getElementById('liveToast')
+        // // Toasts相关功能
+        // const toastTrigger = document.getElementById('liveToastBtn')
+        // const toastLiveExample = document.getElementById('liveToast')
 
-        if (toastTrigger) {
-            const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
-            toastTrigger.addEventListener('click', () => {
-                toastBootstrap.show()
-            })
-        }
+        // if (toastTrigger) {
+        //     const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+        //     toastTrigger.addEventListener('click', () => {
+        //         toastBootstrap.show()
+        //     })
+        // }
 
-        // toobar的back-to-top按钮
-        (function() {
-            const backToTopButton = document.getElementById('back-to-top');
+        // // toobar的back-to-top按钮
+        // (function() {
+        //     const backToTopButton = document.getElementById('back-to-top');
 
-            backToTopButton.addEventListener('click', () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-        })();
+        //     backToTopButton.addEventListener('click', () => {
+        //         window.scrollTo({
+        //             top: 0,
+        //             behavior: 'smooth'
+        //         });
+        //     });
+        // })();
 
     </script>
 </body>
