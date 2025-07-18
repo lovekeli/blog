@@ -754,6 +754,38 @@
       "url": "../apps/medium/index.html",
       "customTile": "",
       "urlRandomToken": true
+    },
+    "login": {
+      "addressBar": false,
+      "autoRun": 0,
+      "background": false,
+      "badge": 0,
+      "desc": "登录页面",
+      "icon": {
+        "type": "img",
+        "content": "../apps/login/icon.png"
+      },
+      "openMode": "normal",
+      "plugin": false,
+      "position": {
+        "autoOffset": true,
+        "left": true,
+        "top": true,
+        "x": "x*0.05",
+        "y": "y*0.05"
+      },
+      "version": "1.0.0",
+      "poweredBy": "罗小黑",
+      "resizable": true,
+      "single": false,
+      "size": {
+        "height": "750",
+        "width": "1024"
+      },
+      "title": "用户登录",
+      "url": "../apps/login/index.html",
+      "customTile": "",
+      "urlRandomToken": true
     }
   },
   "shortcuts": [
@@ -889,6 +921,11 @@
     "height": 494,
     "sidebar": [
       {
+        "app": "login",
+        "title": "账户",
+        "params": {},
+        "hash": ""
+      },{
         "app": "yl-browser",
         "title": "浏览器",
         "params": {},
