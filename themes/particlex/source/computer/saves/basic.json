@@ -98,7 +98,7 @@
         "autoOffset": true
       },
       "version": "1.0.0",
-      "poweredBy": "罗小黑",
+      "poweredBy": "管理员",
       "resizable": true,
       "single": true,
       "size": {
@@ -130,7 +130,7 @@
         "autoOffset": true
       },
       "version": "1.0.0",
-      "poweredBy": "罗小黑",
+      "poweredBy": "管理员",
       "resizable": true,
       "single": true,
       "size": {
@@ -294,7 +294,7 @@
         "y": "y*0.1"
       },
       "version": "1.0.0",
-      "poweredBy": "罗小黑",
+      "poweredBy": "管理员",
       "resizable": true,
       "single": true,
       "size": {
@@ -326,7 +326,7 @@
         "y": "y*0.1"
       },
       "version": "1.0.0",
-      "poweredBy": "罗小黑",
+      "poweredBy": "管理员",
       "resizable": true,
       "single": true,
       "size": {
@@ -358,7 +358,7 @@
         "y": "y*0.1"
       },
       "version": "1.0.0",
-      "poweredBy": "罗小黑",
+      "poweredBy": "管理员",
       "resizable": true,
       "single": true,
       "size": {
@@ -423,7 +423,7 @@
         "y": "y*0.05"
       },
       "version": "1.0.0",
-      "poweredBy": "罗小黑",
+      "poweredBy": "管理员",
       "resizable": true,
       "single": true,
       "size": {
@@ -455,7 +455,7 @@
         "y": "y*0.05"
       },
       "version": "1.0.0",
-      "poweredBy": "罗小黑",
+      "poweredBy": "管理员",
       "resizable": true,
       "single": true,
       "size": {
@@ -487,7 +487,7 @@
         "y": "y*0.05"
       },
       "version": "1.0.0",
-      "poweredBy": "罗小黑",
+      "poweredBy": "管理员",
       "resizable": true,
       "single": true,
       "size": {
@@ -519,7 +519,7 @@
         "y": "y*0.05"
       },
       "version": "1.0.0",
-      "poweredBy": "罗小黑",
+      "poweredBy": "管理员",
       "resizable": true,
       "single": true,
       "size": {
@@ -551,7 +551,7 @@
         "y": "y*0.05"
       },
       "version": "1.0.0",
-      "poweredBy": "罗小黑",
+      "poweredBy": "管理员",
       "resizable": true,
       "single": true,
       "size": {
@@ -583,7 +583,7 @@
         "y": "y*0.05"
       },
       "version": "1.0.0",
-      "poweredBy": "罗小黑",
+      "poweredBy": "管理员",
       "resizable": true,
       "single": true,
       "size": {
@@ -615,7 +615,7 @@
         "y": "y*0.05"
       },
       "version": "1.0.0",
-      "poweredBy": "罗小黑",
+      "poweredBy": "管理员",
       "resizable": true,
       "single": false,
       "size": {
@@ -647,7 +647,7 @@
         "y": "y*0.05"
       },
       "version": "1.0.0",
-      "poweredBy": "罗小黑",
+      "poweredBy": "管理员",
       "resizable": true,
       "single": false,
       "size": {
@@ -679,7 +679,7 @@
         "y": "y*0.05"
       },
       "version": "1.0.0",
-      "poweredBy": "罗小黑",
+      "poweredBy": "管理员",
       "resizable": true,
       "single": false,
       "size": {
@@ -711,7 +711,7 @@
         "y": "y*0.05"
       },
       "version": "1.0.0",
-      "poweredBy": "罗小黑",
+      "poweredBy": "管理员",
       "resizable": true,
       "single": false,
       "size": {
@@ -743,7 +743,7 @@
         "y": "y*0.05"
       },
       "version": "1.0.0",
-      "poweredBy": "罗小黑",
+      "poweredBy": "管理员",
       "resizable": true,
       "single": false,
       "size": {
@@ -775,7 +775,7 @@
         "y": "y*0.05"
       },
       "version": "1.0.0",
-      "poweredBy": "罗小黑",
+      "poweredBy": "管理员",
       "resizable": true,
       "single": false,
       "size": {
@@ -784,6 +784,38 @@
       },
       "title": "用户登录",
       "url": "../apps/login/index.html",
+      "customTile": "",
+      "urlRandomToken": true
+    },
+    "paintboard": {
+      "addressBar": false,
+      "autoRun": 0,
+      "background": false,
+      "badge": 0,
+      "desc": "画板",
+      "icon": {
+        "type": "img",
+        "content": "../apps/paintboard/icon.png"
+      },
+      "openMode": "normal",
+      "plugin": false,
+      "position": {
+        "autoOffset": true,
+        "left": true,
+        "top": true,
+        "x": "x*0.05",
+        "y": "y*0.05"
+      },
+      "version": "1.0.0",
+      "poweredBy": "管理员",
+      "resizable": true,
+      "single": false,
+      "size": {
+        "height": "750",
+        "width": "1024"
+      },
+      "title": "画板1.0",
+      "url": "../apps/paintboard/index.html",
       "customTile": "",
       "urlRandomToken": true
     }
@@ -980,6 +1012,12 @@
       "itemPushed-8": {
         "app": "app-vscode",
         "title": "Visual Studio Code",
+        "params": {},
+        "hash": ""
+      },
+      "itemPushed-9": {
+        "app": "paintboard",
+        "title": "画板",
         "params": {},
         "hash": ""
       },
