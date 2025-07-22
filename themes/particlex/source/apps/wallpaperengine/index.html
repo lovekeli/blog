@@ -7,7 +7,8 @@
     <script src="/js/safety/sourceverify.js"></script>
     <meta name="viewport"
         content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-        
+    </meta>
+    <script  type="text/javascript" charset="utf-8" src="./L2Dwidget.min.js"></script>
     <style>
         html,
         body {
@@ -15,6 +16,7 @@
             height: 100%;
             overflow: hidden;
         }
+
         .fullscreen {
             object-fit: cover;
             position: absolute;
@@ -24,10 +26,33 @@
             height: 100%;
         }
     </style>
-    </meta>
+
     <script>
-        let url=URL.parse(window.location.href);
-        let sys=url.searchParams.get('sys');
+        L2Dwidget.init({
+            "model": {
+                jsonPath: "https://unpkg.com/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json",
+                "scale": 1
+            },
+            "display": {
+                "position": "right", //模型的表现位置
+                "width": 150,  //模型的宽度
+                "height": 300, //模型的高度
+                "hOffset": 0,
+                "vOffset": -20
+            },
+            "mobile": {
+                "show": true,
+                "scale": 0.5
+            },
+            "react": {
+                "opacityDefault": 0.7,  //模型默认透明度
+                "opacityOnHover": 0.2
+            }
+        });
+    </script>
+    <script>
+        let url = URL.parse(window.location.href);
+        let sys = url.searchParams.get('sys');
         window.addEventListener('message', (e) => {
             if (e.origin === window.location.origin) {
                 let event = e.data['event'];
@@ -49,13 +74,13 @@
                                 video.hidden = false;
                                 break;
                         }
-                        localStorage.setItem(sys+'-wallpaper', JSON.stringify(data));
+                        localStorage.setItem(sys + '-wallpaper', JSON.stringify(data));
                         ; break;
                 }
             }
         });
         window.onload = function () {
-            let wallpaper = localStorage.getItem(sys+'-wallpaper');
+            let wallpaper = localStorage.getItem(sys + '-wallpaper');
             if (!wallpaper) {
                 wallpaper = '{"type":"img","url":"./wallpapers/bg1.jpg"}';
             }
@@ -84,8 +109,7 @@
 <body>
 
     <img id="img-wallpaper" class="fullscreen">
-    <video id="video-wallpaper"  autoplay muted loop class="fullscreen"
-        type="video/mp4">
+    <video id="video-wallpaper" autoplay muted loop class="fullscreen" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 </body>
