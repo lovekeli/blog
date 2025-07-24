@@ -2,7 +2,7 @@
   "configs": {
     "topTaskBar": false,
     "sound": false,
-    "wallpaper": "../apps/wallpaperengine/wallpapers/bg1.jpg",
+    "wallpaper": "https://vip.123pan.cn/1819440530/homepage/blog/computer/wallpapers/bg1.jpg",
     "wallpaperBlur": false,
     "wallpaperSlide": false,
     "wallpaperSlideRandom": true,
@@ -16,60 +16,60 @@
     "autoThemeColor": true,
     "wallpapers": [
       {
-        "image": "../apps/wallpaperengine/wallpapers/bg1.jpg",
-        "preview": "../apps/wallpaperengine/wallpapers/bg1_1.jpg"
+        "image": "https://vip.123pan.cn/1819440530/homepage/blog/computer/wallpapers/bg1.jpg",
+        "preview": "https://vip.123pan.cn/1819440530/homepage/blog/computer/wallpapers/bg1_1.jpg"
       },
       {
-        "image": "../apps/wallpaperengine/wallpapers/bg2.jpg",
-        "preview": "../apps/wallpaperengine/wallpapers/bg2_1.jpg"
+        "image": "https://vip.123pan.cn/1819440530/homepage/blog/computer/wallpapers/bg2.jpg",
+        "preview": "https://vip.123pan.cn/1819440530/homepage/blog/computer/wallpapers/bg2_1.jpg"
       },
       {
-        "image": "../apps/wallpaperengine/wallpapers/bg3.jpg",
-        "preview": "../apps/wallpaperengine/wallpapers/bg3_1.jpg"
+        "image": "https://vip.123pan.cn/1819440530/homepage/blog/computer/wallpapers/bg3.jpg",
+        "preview": "https://vip.123pan.cn/1819440530/homepage/blog/computer/wallpapers/bg3_1.jpg"
       },
       {
-        "image": "../apps/wallpaperengine/wallpapers/bg4.jpg",
-        "preview": "../apps/wallpaperengine/wallpapers/bg4_1.jpg"
+        "image": "https://vip.123pan.cn/1819440530/homepage/blog/computer/wallpapers/bg4.jpg",
+        "preview": "https://vip.123pan.cn/1819440530/homepage/blog/computer/wallpapers/bg4_1.jpg"
       },
       {
-        "image": "../apps/wallpaperengine/wallpapers/bg5.jpg",
-        "preview": "../apps/wallpaperengine/wallpapers/bg5_1.jpg"
+        "image": "https://vip.123pan.cn/1819440530/homepage/blog/computer/wallpapers/bg5.jpg",
+        "preview": "https://vip.123pan.cn/1819440530/homepage/blog/computer/wallpapers/bg5_1.jpg"
       },
       {
-        "image": "../apps/wallpaperengine/wallpapers/bg6.jpg",
-        "preview": "../apps/wallpaperengine/wallpapers/bg6_1.jpg"
+        "image": "https://vip.123pan.cn/1819440530/homepage/blog/computer/wallpapers/bg6.jpg",
+        "preview": "https://vip.123pan.cn/1819440530/homepage/blog/computer/wallpapers/bg6_1.jpg"
       },
       {
-        "image": "../apps/wallpaperengine/wallpapers/bg7.jpg",
-        "preview": "../apps/wallpaperengine/wallpapers/bg7_1.jpg"
+        "image": "https://vip.123pan.cn/1819440530/homepage/blog/computer/wallpapers/bg7.jpg",
+        "preview": "https://vip.123pan.cn/1819440530/homepage/blog/computer/wallpapers/bg7_1.jpg"
       },
       {
-        "image": "../apps/wallpaperengine/wallpapers/bg8.jpg",
-        "preview": "../apps/wallpaperengine/wallpapers/bg8_1.jpg"
+        "image": "https://vip.123pan.cn/1819440530/homepage/blog/computer/wallpapers/bg8.jpg",
+        "preview": "https://vip.123pan.cn/1819440530/homepage/blog/computer/wallpapers/bg8_1.jpg"
       },
       {
-        "image": "../apps/wallpaperengine/wallpapers/bg9.jpg",
-        "preview": "../apps/wallpaperengine/wallpapers/bg9_1.jpg"
+        "image": "https://vip.123pan.cn/1819440530/homepage/blog/computer/wallpapers/bg9.jpg",
+        "preview": "https://vip.123pan.cn/1819440530/homepage/blog/computer/wallpapers/bg9_1.jpg"
       },
       {
-        "image": "../apps/wallpaperengine/wallpapers/bg10.jpg",
-        "preview": "../apps/wallpaperengine/wallpapers/bg10_1.jpg"
+        "image": "https://vip.123pan.cn/1819440530/homepage/blog/computer/wallpapers/bg10.jpg",
+        "preview": "https://vip.123pan.cn/1819440530/homepage/blog/computer/wallpapers/bg10_1.jpg"
       },
       {
-        "image": "../apps/wallpaperengine/wallpapers/bg11.jpg",
-        "preview": "../apps/wallpaperengine/wallpapers/bg11_1.jpg"
+        "image": "https://vip.123pan.cn/1819440530/homepage/blog/computer/wallpapers/bg11.jpg",
+        "preview": "https://vip.123pan.cn/1819440530/homepage/blog/computer/wallpapers/bg11_1.jpg"
       },
       {
-        "image": "../apps/wallpaperengine/wallpapers/bg12.jpg",
-        "preview": "../apps/wallpaperengine/wallpapers/bg12_1.jpg"
+        "image": "https://vip.123pan.cn/1819440530/homepage/blog/computer/wallpapers/bg12.jpg",
+        "preview": "https://vip.123pan.cn/1819440530/homepage/blog/computer/wallpapers/bg12_1.jpg"
       },
       {
-        "image": "../apps/wallpaperengine/wallpapers/bg13.jpg",
-        "preview": "../apps/wallpaperengine/wallpapers/bg13_1.jpg"
+        "image": "https://vip.123pan.cn/1819440530/homepage/blog/computer/wallpapers/bg13.jpg",
+        "preview": "https://vip.123pan.cn/1819440530/homepage/blog/computer/wallpapers/bg13_1.jpg"
       },
       {
-        "image": "../apps/wallpaperengine/wallpapers/bg14.jpg",
-        "preview": "../apps/wallpaperengine/wallpapers/bg14_1.jpg"
+        "image": "https://vip.123pan.cn/1819440530/homepage/blog/computer/wallpapers/bg14.jpg",
+        "preview": "https://vip.123pan.cn/1819440530/homepage/blog/computer/wallpapers/bg14_1.jpg"
       }
     ],
     "pathRes": "./res",

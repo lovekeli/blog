@@ -6,9 +6,7 @@ avatar: ../img/head.jpeg
 
 # Home page background image
 background:
-    - ./images/background.jpg
-    - ./images/background1.png
-
+    - https://vip.123pan.cn/1819440530/homepage/blog/background.jpg
 
 # Loading image
 loading: ../images/loading.gif
