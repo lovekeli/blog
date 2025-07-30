@@ -111,6 +111,8 @@
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
         let gameUrl = urlParams.get("url");
+        let isThreads = urlParams.get("threads");
+        isThreads=isThreads?isThreads:false;
         let core = (ext) => {
             if (["fds", "nes", "unif", "unf"].includes(ext))
                 return "nes"
@@ -136,6 +138,9 @@
             if (["d64"].includes(ext))
                 return "vice_x64sc"
 
+            if (["iso","cso"].includes(ext))
+                return "psp"
+            
             if (["nds", "gba", "gb", "z64", "n64"].includes(ext))
                 return ext
         };
@@ -156,7 +161,7 @@
             window.EJS_startOnLoaded = true;
             window.EJS_DEBUG_XX = false;
             window.EJS_disableDatabases = true;
-            window.EJS_threads = false;
+            window.EJS_threads = isThreads;
 
             script.src = "./data/loader.js";
             document.body.appendChild(script);
