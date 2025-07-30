@@ -100,7 +100,8 @@ function playgame() {
         case 'gba':
         case 'gbc':
         case 'n64':
-            app['url'] = '/apps/emulator/?url=' + currentproduct['地址'];
+        case 'psp':
+            app['url'] = '/apps/emulator/?rom=' + currentproduct['地址'];
             break;
         case 'ons':
             app['url'] = '/apps/ons/?url=' + currentproduct['地址'];
