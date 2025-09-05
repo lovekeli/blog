@@ -36,10 +36,6 @@ menu:
         name: tags
         theme: solid
         link: /tags
-    在线应用:
-        name: computer
-        theme: solid
-        link: /computer
     关于我:
         name: id-card
         theme: solid
@@ -52,7 +48,7 @@ card:
         宅男拯救世界~
     iconLinks:
     friendLinks:
-        在线应用: /computer
+        在线应用: https://onlylovekeli.cn/nav/index.html
 # Footer info
 footer:
     starttime: 2016-10-01
