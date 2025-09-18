@@ -1,0 +1,801 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>unity实现在继承Graphic的组件上画图 | 可莉害了</title>
+    <meta name="author" content="可莉害了" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/../img/head.jpeg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/../images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>可莉害了</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;首页</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;归档</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;标签</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;关于我</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;可莉害了</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">首页</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">归档</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">标签</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">关于我</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>unity实现在继承Graphic的组件上画图</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/7/29
+        </span>
+        
+        <span class="category">
+            <a href="/categories/unity/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                unity
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/unity/" style="color: #03a9f4">
+                    unity
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>需求来源：需要在图片上或文本上进行标记</p>
+<span id="more"></span>
+<h1 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h1><p><img src="/./images/post/unity%E5%AE%9E%E7%8E%B0%E5%9C%A8%E7%BB%A7%E6%89%BFGraphic%E7%9A%84%E7%BB%84%E4%BB%B6%E4%B8%8A%E7%94%BB%E5%9B%BE/1.png"><br>注意需要将图片勾选Read&#x2F;Write属性<br><img src="/./images/post/unity%E5%AE%9E%E7%8E%B0%E5%9C%A8%E7%BB%A7%E6%89%BFGraphic%E7%9A%84%E7%BB%84%E4%BB%B6%E4%B8%8A%E7%94%BB%E5%9B%BE/2.png"></p>
+<h1 id="将代码挂载到渲染的组件上，这里只实现了Image、RawImage和Text组件其余的如果需要请自行实现"><a href="#将代码挂载到渲染的组件上，这里只实现了Image、RawImage和Text组件其余的如果需要请自行实现" class="headerlink" title="将代码挂载到渲染的组件上，这里只实现了Image、RawImage和Text组件其余的如果需要请自行实现"></a>将代码挂载到渲染的组件上，这里只实现了Image、RawImage和Text组件其余的如果需要请自行实现</h1><pre><code class="csharp">using UnityEngine;
+using UnityEngine.UI;
+using System.Collections.Generic;
+using System.IO;
+
+[RequireComponent(typeof(Graphic))]
+public class GraphicDrawer : MonoBehaviour
+&#123;
+    [Header(&quot;绘制设置&quot;)]
+    public bool IsTest = false; //启用测试
+    public Color lineColor = Color.red;        // 线条颜色
+    public float lineWidth = 2f;               // 线条宽度
+    public bool isDrawingEnabled = true;       // 是否启用绘制
+    public int defaultTextureSize = 512;       // 默认纹理尺寸（用于无纹理的Graphic）
+
+    private Graphic targetGraphic;             // 目标Graphic组件
+    private Texture2D drawTexture;             // 用于绘制的纹理
+    private Color[] originalPixels;            // 原始图像像素
+    private bool isDrawing = false;            // 是否正在绘制
+    private Vector2 lastPosition;              // 上一个绘制位置
+    private RectTransform rectTransform;       // 缓存RectTransform
+    private Rect graphicRect;                  // Graphic的矩形区域
+    private Vector2 textureSize;               // 纹理尺寸（像素）
+    private Canvas canvas;                     // 缓存Canvas
+    private Camera uiCamera;                   // UI摄像机
+    private bool usingOriginalTexture;         // 是否使用原始纹理
+    private RawImage overlayRawImage;          // 用于Text组件的叠加层
+
+    // 线段列表，用于撤销功能
+    private List&lt;List&lt;Vector2&gt;&gt; lineSegments = new List&lt;List&lt;Vector2&gt;&gt;();
+    private List&lt;Color&gt; lineColors = new List&lt;Color&gt;();
+    private List&lt;float&gt; lineWidths = new List&lt;float&gt;();
+    private int currentLineIndex = -1;
+
+    void Awake()
+    &#123;
+        targetGraphic = GetComponent&lt;Graphic&gt;();
+        rectTransform = GetComponent&lt;RectTransform&gt;();
+        canvas = GetComponentInParent&lt;Canvas&gt;();
+
+        // 获取UI摄像机（如果有）
+        if (canvas.renderMode != RenderMode.ScreenSpaceOverlay)
+        &#123;
+            uiCamera = canvas.worldCamera;
+        &#125;
+
+        // 为Text组件创建专用叠加层
+        if (targetGraphic is Text)
+        &#123;
+            CreateTextOverlay();
+        &#125;
+        if (IsTest)
+        &#123;
+            InitializeDrawTexture();
+        &#125;
+    &#125;
+
+    void Start()
+    &#123;
+        // 确保在Start阶段获取正确的矩形大小
+        graphicRect = rectTransform.rect;
+    &#125;
+
+    // 为Text组件创建绘制叠加层
+    void CreateTextOverlay()
+    &#123;
+        // 创建一个RawImage作为叠加层
+        GameObject overlayObj = new GameObject(&quot;TextDrawOverlay&quot;);
+        overlayObj.transform.SetParent(transform, false);
+
+        overlayRawImage = overlayObj.AddComponent&lt;RawImage&gt;();
+        overlayRawImage.raycastTarget = false; // 不阻挡鼠标事件
+        overlayRawImage.color = new Color(1, 1, 1, 1); // 完全不透明
+
+        // 匹配Text的大小和位置
+        RectTransform overlayRect = overlayObj.GetComponent&lt;RectTransform&gt;();
+        overlayRect.anchorMin = Vector2.zero;
+        overlayRect.anchorMax = Vector2.one;
+        overlayRect.offsetMin = Vector2.zero;
+        overlayRect.offsetMax = Vector2.zero;
+        overlayRect.pivot = rectTransform.pivot;
+    &#125;
+
+    // 初始化绘制纹理
+    public void InitializeDrawTexture()
+    &#123;
+        // 尝试从Graphic获取现有纹理
+        Texture existingTexture = GetTextureFromGraphic();
+
+        if (existingTexture != null &amp;&amp; existingTexture is Texture2D existingTex2D)
+        &#123;
+            // 使用现有纹理
+            usingOriginalTexture = true;
+            textureSize = new Vector2(existingTex2D.width, existingTex2D.height);
+
+            // 创建可写的纹理副本
+            drawTexture = new Texture2D((int)textureSize.x, (int)textureSize.y, TextureFormat.RGBA32, false);
+            originalPixels = existingTex2D.GetPixels();
+            drawTexture.SetPixels(originalPixels);
+            drawTexture.Apply();
+        &#125;
+        else
+        &#123;
+            // 没有现有纹理，创建新的空白纹理
+            usingOriginalTexture = false;
+            graphicRect = rectTransform.rect;
+
+            // 计算合适的纹理尺寸
+            if (graphicRect.width &gt; 0 &amp;&amp; graphicRect.height &gt; 0)
+            &#123;
+                textureSize = new Vector2(Mathf.CeilToInt(graphicRect.width), Mathf.CeilToInt(graphicRect.height));
+            &#125;
+            else
+            &#123;
+                textureSize = new Vector2(defaultTextureSize, defaultTextureSize);
+            &#125;
+
+            drawTexture = new Texture2D((int)textureSize.x, (int)textureSize.y, TextureFormat.RGBA32, false);
+
+            // 填充为透明
+            Color[] clearPixels = new Color[(int)textureSize.x * (int)textureSize.y];
+            for (int i = 0; i &lt; clearPixels.Length; i++)
+            &#123;
+                clearPixels[i] = Color.clear;
+            &#125;
+            drawTexture.SetPixels(clearPixels);
+            drawTexture.Apply();
+
+            originalPixels = clearPixels;
+        &#125;
+
+        // 将新纹理应用到Graphic
+        ApplyTextureToGraphic(drawTexture);
+    &#125;
+
+    // 从不同的Graphic组件获取纹理
+    Texture GetTextureFromGraphic()
+    &#123;
+        if (targetGraphic is Image image)
+        &#123;
+            return image.sprite?.texture;
+        &#125;
+        else if (targetGraphic is RawImage rawImage)
+        &#123;
+            return rawImage.texture;
+        &#125;
+
+        // Text组件通常没有纹理，返回null
+        return null;
+    &#125;
+
+    // 将纹理应用到不同的Graphic组件
+    void ApplyTextureToGraphic(Texture2D texture)
+    &#123;
+        if (targetGraphic is Image image)
+        &#123;
+            image.sprite = Sprite.Create(texture,
+                new Rect(0, 0, texture.width, texture.height),
+                new Vector2(0.5f, 0.5f));
+            image.preserveAspect = usingOriginalTexture;
+        &#125;
+        else if (targetGraphic is RawImage rawImage)
+        &#123;
+            rawImage.texture = texture;
+            rawImage.uvRect = new Rect(0, 0, 1, 1);
+        &#125;
+        // 对于Text组件，使用叠加层显示绘制内容
+        else if (targetGraphic is Text &amp;&amp; overlayRawImage != null)
+        &#123;
+            overlayRawImage.texture = texture;
+        &#125;
+    &#125;
+
+    void Update()
+    &#123;
+        if (!isDrawingEnabled) return;
+
+        // 处理鼠标输入
+        if (Input.GetMouseButtonDown(0))
+        &#123;
+            StartDrawing();
+        &#125;
+        else if (Input.GetMouseButton(0) &amp;&amp; isDrawing)
+        &#123;
+            ContinueDrawing();
+        &#125;
+        else if (Input.GetMouseButtonUp(0) &amp;&amp; isDrawing)
+        &#123;
+            StopDrawing();
+        &#125;
+
+        // 撤销功能 (Ctrl+Z)
+        if (Input.GetKey(KeyCode.LeftControl) &amp;&amp; Input.GetKeyDown(KeyCode.Z))
+        &#123;
+            UndoLastLine();
+        &#125;
+
+        // 清除所有绘制 (Ctrl+Shift+C)
+        if (Input.GetKey(KeyCode.LeftControl) &amp;&amp; Input.GetKey(KeyCode.LeftShift) &amp;&amp; Input.GetKeyDown(KeyCode.C))
+        &#123;
+            ClearAllDrawings();
+        &#125;
+
+        // 保存图像 (Ctrl+S)
+        if (Input.GetKey(KeyCode.LeftControl) &amp;&amp; Input.GetKeyDown(KeyCode.S))
+        &#123;
+            // 示例：保存到默认路径
+            string defaultPath = Path.Combine(Application.persistentDataPath, &quot;drawing_result.png&quot;);
+            SaveImageToLocal(defaultPath);
+            Debug.Log(&quot;图像已保存到: &quot; + defaultPath);
+        &#125;
+    &#125;
+
+    // 开始绘制
+    void StartDrawing()
+    &#123;
+        if (RectTransformUtility.RectangleContainsScreenPoint(rectTransform, Input.mousePosition, uiCamera))
+        &#123;
+            isDrawing = true;
+            lastPosition = GetTexturePosition();
+
+            // 开始新的线段
+            lineSegments.Add(new List&lt;Vector2&gt;());
+            lineSegments[lineSegments.Count - 1].Add(lastPosition);
+
+            // 记录当前线条的颜色和宽度
+            lineColors.Add(lineColor);
+            lineWidths.Add(lineWidth);
+
+            currentLineIndex = lineSegments.Count - 1;
+        &#125;
+    &#125;
+
+    // 继续绘制
+    void ContinueDrawing()
+    &#123;
+        Vector2 currentPosition = GetTexturePosition();
+
+        // 只在位置变化明显时才绘制，优化性能
+        if (Vector2.Distance(currentPosition, lastPosition) &gt; 0.5f)
+        &#123;
+            // 绘制线段
+            DrawLine(lastPosition, currentPosition, lineColor, lineWidth);
+
+            // 记录线段点
+            lineSegments[currentLineIndex].Add(currentPosition);
+
+            lastPosition = currentPosition;
+        &#125;
+    &#125;
+
+    // 停止绘制
+    void StopDrawing()
+    &#123;
+        isDrawing = false;
+    &#125;
+
+    // 获取鼠标在纹理上的精确位置
+    Vector2 GetTexturePosition()
+    &#123;
+        // 1. 将屏幕坐标转换为世界坐标
+        RectTransformUtility.ScreenPointToWorldPointInRectangle(
+            rectTransform,
+            Input.mousePosition,
+            uiCamera,
+            out Vector3 worldPos);
+
+        // 2. 将世界坐标转换为本地坐标（相对于Graphic的左下角）
+        Vector2 localPos = rectTransform.InverseTransformPoint(worldPos);
+
+        // 3. 计算从Graphic左下角到Pivot的偏移
+        Vector2 pivotOffset = new Vector2(
+            graphicRect.width * rectTransform.pivot.x,
+            graphicRect.height * rectTransform.pivot.y
+        );
+
+        // 4. 计算鼠标在Graphic矩形内的归一化坐标（0-1范围）
+        Vector2 normalizedPos = new Vector2(
+            (localPos.x + pivotOffset.x) / graphicRect.width,
+            (localPos.y + pivotOffset.y) / graphicRect.height
+        );
+
+        // 5. 将归一化坐标转换为纹理像素坐标
+        Vector2 texturePos = new Vector2(
+            normalizedPos.x * textureSize.x,
+            normalizedPos.y * textureSize.y
+        );
+
+        // 6. 确保坐标在纹理范围内
+        texturePos.x = Mathf.Clamp(texturePos.x, 0, textureSize.x);
+        texturePos.y = Mathf.Clamp(texturePos.y, 0, textureSize.y);
+
+        return texturePos;
+    &#125;
+
+    // 绘制线段
+    void DrawLine(Vector2 start, Vector2 end, Color color, float width)
+    &#123;
+        // 获取线段上的所有点
+        List&lt;Vector2&gt; points = GetPointsAlongLine(start, end);
+
+        // 为每个点绘制一个圆，形成线条
+        foreach (Vector2 point in points)
+        &#123;
+            DrawCircle(point, width / 2, color);
+        &#125;
+
+        drawTexture.Apply();
+
+        // 强制更新UI
+        targetGraphic.SetAllDirty();
+    &#125;
+
+    // 获取线段上的所有点
+    List&lt;Vector2&gt; GetPointsAlongLine(Vector2 start, Vector2 end)
+    &#123;
+        List&lt;Vector2&gt; points = new List&lt;Vector2&gt;();
+        float distance = Vector2.Distance(start, end);
+        int segments = Mathf.Max(2, (int)distance);
+
+        for (int i = 0; i &lt; segments; i++)
+        &#123;
+            float t = i / (float)segments;
+            Vector2 point = Vector2.Lerp(start, end, t);
+            points.Add(point);
+        &#125;
+
+        points.Add(end); // 确保包含终点
+        return points;
+    &#125;
+
+    // 绘制圆
+    void DrawCircle(Vector2 center, float radius, Color color)
+    &#123;
+        int segments = Mathf.Max(8, (int)(radius * Mathf.PI * 2));
+
+        for (int i = 0; i &lt; segments; i++)
+        &#123;
+            float angle1 = i * 2 * Mathf.PI / segments;
+            Vector2 point1 = new Vector2(
+                center.x + Mathf.Cos(angle1) * radius,
+                center.y + Mathf.Sin(angle1) * radius
+            );
+
+            // 填充圆内部
+            FillBetweenPoints(center, point1, color);
+        &#125;
+    &#125;
+
+    // 填充两点之间的区域（用于填充圆）
+    void FillBetweenPoints(Vector2 center, Vector2 point, Color color)
+    &#123;
+        List&lt;Vector2&gt; points = GetPointsAlongLine(center, point);
+
+        foreach (Vector2 p in points)
+        &#123;
+            SetPixel((int)p.x, (int)p.y, color);
+        &#125;
+    &#125;
+
+    // 设置像素颜色
+    void SetPixel(int x, int y, Color color)
+    &#123;
+        // 检查坐标是否在纹理范围内
+        if (x &gt;= 0 &amp;&amp; x &lt; drawTexture.width &amp;&amp; y &gt;= 0 &amp;&amp; y &lt; drawTexture.height)
+        &#123;
+            drawTexture.SetPixel(x, y, color);
+        &#125;
+    &#125;
+
+    // 撤销最后一条线
+    public void UndoLastLine()
+    &#123;
+        if (lineSegments.Count == 0) return;
+
+        // 清除最后一条线
+        lineSegments.RemoveAt(lineSegments.Count - 1);
+        lineColors.RemoveAt(lineColors.Count - 1);
+        lineWidths.RemoveAt(lineWidths.Count - 1);
+
+        // 重新绘制所有线条
+        RedrawAllLines();
+    &#125;
+
+    // 清除所有绘制
+    public void ClearAllDrawings()
+    &#123;
+        // 恢复原始像素
+        drawTexture.SetPixels(originalPixels);
+        drawTexture.Apply();
+
+        // 清空线段列表
+        lineSegments.Clear();
+        lineColors.Clear();
+        lineWidths.Clear();
+
+        // 强制更新UI
+        targetGraphic.SetAllDirty();
+    &#125;
+
+    // 重新绘制所有线条
+    void RedrawAllLines()
+    &#123;
+        // 先清除所有绘制
+        drawTexture.SetPixels(originalPixels);
+
+        // 重新绘制每条线
+        for (int i = 0; i &lt; lineSegments.Count; i++)
+        &#123;
+            List&lt;Vector2&gt; points = lineSegments[i];
+            Color color = lineColors[i];
+            float width = lineWidths[i];
+
+            for (int j = 1; j &lt; points.Count; j++)
+            &#123;
+                DrawLine(points[j - 1], points[j], color, width);
+            &#125;
+        &#125;
+
+        drawTexture.Apply();
+    &#125;
+
+    /// &lt;summary&gt;
+    /// 将当前Graphic的内容保存到本地文件
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;filePath&quot;&gt;保存的文件路径（包含文件名和扩展名）&lt;/param&gt;
+    /// &lt;returns&gt;是否保存成功&lt;/returns&gt;
+    public bool SaveImageToLocal(string filePath)
+    &#123;
+        if (drawTexture == null)
+        &#123;
+            Debug.LogError(&quot;绘制纹理为空，无法保存&quot;);
+            return false;
+        &#125;
+
+        try
+        &#123;
+            // 创建目录（如果不存在）
+            string directory = Path.GetDirectoryName(filePath);
+            if (!Directory.Exists(directory))
+            &#123;
+                Directory.CreateDirectory(directory);
+            &#125;
+
+            // 根据文件扩展名选择合适的格式
+            byte[] bytes;
+            string extension = Path.GetExtension(filePath).ToLower();
+
+            if (extension == &quot;.png&quot;)
+            &#123;
+                bytes = drawTexture.EncodeToPNG();
+            &#125;
+            else if (extension == &quot;.jpg&quot; || extension == &quot;.jpeg&quot;)
+            &#123;
+                bytes = drawTexture.EncodeToJPG();
+            &#125;
+            else
+            &#123;
+                // 默认保存为PNG
+                Debug.LogWarning(&quot;不支持的文件格式，将保存为PNG格式&quot;);
+                filePath = Path.ChangeExtension(filePath, &quot;.png&quot;);
+                bytes = drawTexture.EncodeToPNG();
+            &#125;
+
+            // 写入文件
+            File.WriteAllBytes(filePath, bytes);
+            Debug.Log($&quot;图像已成功保存到: &#123;filePath&#125;&quot;);
+            return true;
+        &#125;
+        catch (System.Exception e)
+        &#123;
+            Debug.LogError($&quot;保存图像失败: &#123;e.Message&#125;&quot;);
+            return false;
+        &#125;
+    &#125;
+
+    // 公开方法：设置线条颜色
+    public void SetLineColor(Color newColor)
+    &#123;
+        lineColor = newColor;
+    &#125;
+
+    // 公开方法：设置线条宽度
+    public void SetLineWidth(float newWidth)
+    &#123;
+        lineWidth = Mathf.Max(0.5f, newWidth); // 确保宽度不会太小
+    &#125;
+
+    // 公开方法：启用/禁用绘制
+    public void SetDrawingEnabled(bool enabled)
+    &#123;
+        isDrawingEnabled = enabled;
+    &#125;
+
+    void OnDestroy()
+    &#123;
+        // 清理为Text创建的叠加层
+        if (overlayRawImage != null)
+        &#123;
+            Destroy(overlayRawImage.gameObject);
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <script>
+    function timeDifference(timeStr) {
+        // 将输入的时间字符串转换为 Date 对象
+        const targetDate = new Date(timeStr);
+        if (isNaN(targetDate.getTime())) {
+            throw new Error('无效的时间格式，支持的格式如: "YYYY-MM-DD HH:mm:ss"');
+        }
+
+        // 获取当前时间
+        const now = new Date();
+
+        // 计算年差
+        let years = now.getFullYear() - targetDate.getFullYear();
+
+        // 计算月差
+        let months = now.getMonth() - targetDate.getMonth();
+
+        // 计算日差
+        let days = now.getDate() - targetDate.getDate();
+
+        // 如果月份或日期不够减，则向前借位
+        if (days < 0) {
+            // 获取上个月的天数
+            const prevMonthLastDay = new Date(
+                now.getFullYear(),
+                now.getMonth(),
+                0
+            ).getDate();
+            days += prevMonthLastDay;
+            months--;
+        }
+
+        if (months < 0) {
+            months += 12;
+            years--;
+        }
+
+        // 处理目标日期在未来的情况
+        if (years < 0) {
+            years = Math.abs(years);
+            months = 11 - months;
+            days = new Date(
+                targetDate.getFullYear(),
+                targetDate.getMonth() + 1,
+                0
+            ).getDate() - days;
+
+            if (days > 0) {
+                months++;
+            }
+
+            if (months >= 12) {
+                years++;
+                months %= 12;
+            }
+        }
+
+        // 构建结果字符串
+        return `${years}年${months}月${days}天`;
+    }
+    document.addEventListener("DOMContentLoaded",  ()=> {
+        document.getElementById('runTime').innerText = this.timeDifference("Sat Oct 01 2016 08:00:00 GMT+0800 (中国标准时间)"); 
+    });
+</script>
+<footer id="footer">
+    <div id="footer-wrap">
+        <!-- <div>
+            &copy;
+            2022 - 2025 可莉害了
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;可莉害了
+        </div> -->
+        <div>
+            网站已运行: <span id="runTime">1年1天</span>
+            <!-- Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a> -->
+        </div>
+        
+    </div>
+</footer>
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

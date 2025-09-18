@@ -1,0 +1,445 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>egret图文混排 | 可莉害了</title>
+    <meta name="author" content="可莉害了" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/../img/head.jpeg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/../images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>可莉害了</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;首页</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;归档</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;标签</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;关于我</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;可莉害了</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">首页</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">归档</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">标签</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">关于我</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>egret图文混排</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/2/7
+        </span>
+        
+        <span class="category">
+            <a href="/categories/egret/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                egret
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/%E6%8F%92%E4%BB%B6/" style="color: #03a9f4">
+                    插件
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>egret图文混排</p>
+<span id="more"></span>
+<pre><code class="javascript">class TextImage extends eui.Group &#123;
+       public templet: egret.TextField
+       constructor(protected _TextImageData: Array&lt;any&gt; = []) &#123;
+           super();
+           this.init()
+       &#125;
+       set TextImageData(val: Array&lt;any&gt;) &#123; this._TextImageData = val; this.init(); &#125;
+       get TextImageData() &#123; return this._TextImageData &#125;
+       _size = 36
+       /**设置文字字体大小 */
+       set size(val: number) &#123;
+           this._size = val
+       &#125;
+       get size(): number &#123;
+           return this._size
+       &#125;
+       private _width: number;
+       /**设置宽度 */
+       set width(val) &#123; this._width = val; this.invalidate(); &#125;
+       get width() &#123; return this._width &#125;;
+       private _verticalAlign = egret.VerticalAlign.MIDDLE;
+       /**设置vercatical */
+       set verticalAlign(val) &#123; this._verticalAlign = val; this.invalidate(); &#125;
+       get verticalAlign() &#123; return this._verticalAlign &#125;;
+       _maxWidth: number
+       /**设置组件的最大宽度 */
+       set maxWidth(val: number) &#123;
+           this._maxWidth = val
+           if (this.templet.width &gt; val) &#123;
+               this.width = val
+               this.invalidate()
+           &#125;
+       &#125;
+       get maxWidth(): number &#123;
+           return this._maxWidth
+       &#125;
+       private _lineSpacing = 0
+       /**设置组件的行间距 */
+       set lineSpacing(val: number) &#123;
+           if (this._lineSpacing === val) return
+           this._lineSpacing = val
+           this.invalidate()
+       &#125;
+       get lineSpacing(): number &#123;
+           return this._lineSpacing
+       &#125;
+       /**立即计算布局 */
+       validateNow() &#123;
+           this.init()
+           this.invalidate_Flag = false
+       &#125;
+       /**组件的每行高度 */
+       lineHeightArray: Array&lt;number&gt; = []
+       components: any[] = []
+       protected init() &#123;
+           this.removeChildren()
+           if (this._TextImageData.length == 0) &#123;
+               this.width = this.height = 0
+               return
+           &#125;
+           // 保存组件,清除事件绑定
+           this.components = []
+           this._TextImageData.forEach(component =&gt; &#123;
+               if (typeof component == &#39;object&#39;) &#123;
+                   this.components.push(component)
+                   if (!component[&#39;watch&#39;]) &#123;
+                       egret.is(component, &#39;eui.Image&#39;) &amp;&amp; component.once(egret.Event.COMPLETE, this.invalidate, this)
+                       eui.Watcher.watch(component, [&#39;width&#39;], this.invalidate, this)
+                       eui.Watcher.watch(component, [&#39;height&#39;], this.invalidate, this)
+                       component[&#39;watch&#39;] = true
+                   &#125;
+               &#125;
+           &#125;)
+           let textFlow = this._TextImageData.map(text =&gt;
+               typeof text === &quot;string&quot; || egret.is(text, &#39;eui.Label&#39;)
+                   ? &#123; text: egret.is(text, &#39;eui.Label&#39;) ? text.text : text &#125;
+                   : &#123; text: &#39;樂&#39;, style: &#123; size: text.width &#125; &#125;
+           )
+           let TextField: egret.TextField = this.templet = new egret.TextField();
+           TextField.size = this.size;
+           TextField.lineSpacing = 0;
+           TextField.width = this.width
+           TextField.textFlow = textFlow
+           TextField.height = TextField.height
+           this.height = 0
+           this.lineHeightArray = []
+           let componentTestIndex = 0 //测量高度的组件序号
+           let componentIndex = 0 //布局的组件序号
+           TextField[&#39;linesArr&#39;].forEach((item,lines) =&gt; &#123;
+               console.log(&#39;item=&gt;&#39;, item)
+               //获取最大高度
+               let maxheight = this.size
+               //组件序号
+               item.elements.forEach((element) =&gt; &#123;
+                   if (element.text == &#39;樂&#39;) &#123;
+                       let c = this.components[componentTestIndex++]
+                       maxheight = Math.max(maxheight, c.height)
+                   &#125;
+               &#125;)
+               maxheight = this._lineSpacing + maxheight
+               this.lineHeightArray.push(maxheight)
+               //开始布局
+               let x = 0
+               item.elements.forEach(element =&gt; &#123;
+                   let component
+                   if (element.text !== &#39;樂&#39;) &#123;
+                       component = new egret.TextField()
+                       component.x = x
+                       component.size = this.size
+                       component.text = element.text
+                       component.width = element.width
+                       component.textColor = this._textColor
+                       component.height = maxheight
+                       component.y = this.height
+                       component.verticalAlign = this._verticalAlign;
+                   &#125; else &#123;
+                       component = this.components[componentIndex++]
+                       component.x = x
+                       component.y = this.height + (maxheight - component.height) / 2
+                   &#125;
+                   x += component.width
+                   this.addChild(component)
+               &#125;)
+               this.height += maxheight
+           &#125;)
+           this._width = this.templet.width
+       &#125;
+       _textColor: number = 0x000000
+       set textColor(val) &#123;
+           this._textColor = val
+           this.invalidate()
+       &#125;
+       get textColor() &#123;
+           return this._textColor
+       &#125;
+       /**失效验证 */
+       private invalidate_Flag: boolean = false
+       private invalidate(e?: egret.Event): void &#123;
+           if (this.invalidate_Flag) &#123;
+               return
+           &#125;
+           this.invalidate_Flag = true
+           this.once(egret.Event.ENTER_FRAME, () =&gt; &#123;
+               this.init()
+               this.invalidate_Flag = false
+           &#125;, this);
+       &#125;
+   &#125;
+</code></pre>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <script>
+    function timeDifference(timeStr) {
+        // 将输入的时间字符串转换为 Date 对象
+        const targetDate = new Date(timeStr);
+        if (isNaN(targetDate.getTime())) {
+            throw new Error('无效的时间格式，支持的格式如: "YYYY-MM-DD HH:mm:ss"');
+        }
+
+        // 获取当前时间
+        const now = new Date();
+
+        // 计算年差
+        let years = now.getFullYear() - targetDate.getFullYear();
+
+        // 计算月差
+        let months = now.getMonth() - targetDate.getMonth();
+
+        // 计算日差
+        let days = now.getDate() - targetDate.getDate();
+
+        // 如果月份或日期不够减，则向前借位
+        if (days < 0) {
+            // 获取上个月的天数
+            const prevMonthLastDay = new Date(
+                now.getFullYear(),
+                now.getMonth(),
+                0
+            ).getDate();
+            days += prevMonthLastDay;
+            months--;
+        }
+
+        if (months < 0) {
+            months += 12;
+            years--;
+        }
+
+        // 处理目标日期在未来的情况
+        if (years < 0) {
+            years = Math.abs(years);
+            months = 11 - months;
+            days = new Date(
+                targetDate.getFullYear(),
+                targetDate.getMonth() + 1,
+                0
+            ).getDate() - days;
+
+            if (days > 0) {
+                months++;
+            }
+
+            if (months >= 12) {
+                years++;
+                months %= 12;
+            }
+        }
+
+        // 构建结果字符串
+        return `${years}年${months}月${days}天`;
+    }
+    document.addEventListener("DOMContentLoaded",  ()=> {
+        document.getElementById('runTime').innerText = this.timeDifference("Sat Oct 01 2016 08:00:00 GMT+0800 (中国标准时间)"); 
+    });
+</script>
+<footer id="footer">
+    <div id="footer-wrap">
+        <!-- <div>
+            &copy;
+            2022 - 2025 可莉害了
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;可莉害了
+        </div> -->
+        <div>
+            网站已运行: <span id="runTime">1年1天</span>
+            <!-- Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a> -->
+        </div>
+        
+    </div>
+</footer>
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

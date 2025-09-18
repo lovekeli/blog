@@ -1,0 +1,466 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>maccms采集接口详解 | 可莉害了</title>
+    <meta name="author" content="可莉害了" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/../img/head.jpeg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/../images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>可莉害了</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;首页</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;归档</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;标签</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;关于我</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;可莉害了</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">首页</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">归档</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">标签</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">关于我</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>maccms采集接口详解</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/7/16
+        </span>
+        
+        <span class="category">
+            <a href="/categories/api/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                api
+            </a>
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>主要介绍maccms的接口参数</p>
+<span id="more"></span>
+<h1 id="一、视频接口"><a href="#一、视频接口" class="headerlink" title="一、视频接口"></a>一、视频接口</h1><pre><code class="javascript">/api.php/provide/vod/?ac=list //获取视频列表
+/api.php/provide/vod/?ac=detail //获取视频详情
+</code></pre>
+<h1 id="二、文章接口"><a href="#二、文章接口" class="headerlink" title="二、文章接口"></a>二、文章接口</h1><pre><code class="javascript">/api.php/provide/art/?ac=list //获取文章列表
+/api.php/provide/art/?ac=detail //获取文章详情
+</code></pre>
+<h1 id="三、通用参数"><a href="#三、通用参数" class="headerlink" title="三、通用参数"></a>三、通用参数</h1><h2 id="1-数据接口"><a href="#1-数据接口" class="headerlink" title="1.数据接口"></a>1.数据接口</h2><table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>示例值</th>
+<th>是否必填</th>
+<th>参数类型</th>
+<th>参数描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>mid</td>
+<td>1</td>
+<td>必填</td>
+<td>text</td>
+<td>模型mid 1影片、2文章、3专题、8明星、9角色、11剧情</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>20</td>
+<td>必填</td>
+<td>text</td>
+<td>每页条数，支持10,20,30</td>
+</tr>
+<tr>
+<td>page</td>
+<td>1</td>
+<td>必填</td>
+<td>text</td>
+<td>页码，最多不超过20页，防止非法采集</td>
+</tr>
+<tr>
+<td>tid</td>
+<td>1</td>
+<td>必填</td>
+<td>text</td>
+<td>分类id</td>
+</tr>
+</tbody></table>
+<p>响应实例：</p>
+<pre><code class="json">&#123;
+    &quot;code&quot;: 1,
+    &quot;msg&quot;: &quot;数据列表&quot;,
+    &quot;page&quot;: 1,
+    &quot;pagecount&quot;: 221,
+    &quot;limit&quot;: 10,
+    &quot;total&quot;: 2204,
+    &quot;list&quot;: [
+        &#123;
+            &quot;vod_id&quot;: 3683,
+            &quot;type_id&quot;: 1,
+            &quot;type_id_1&quot;: 0,
+            &quot;group_id&quot;: 0,
+            &quot;vod_name&quot;: &quot;不表演才艺居然不给我饭吃#抖音汽车&quot;,
+            ...
+        &#125;,
+        &#123;
+            &quot;vod_id&quot;: 3685,
+            &quot;type_id&quot;: 1,
+            &quot;type_id_1&quot;: 0,
+            &quot;group_id&quot;: 0,
+            &quot;vod_name&quot;: &quot;所以非要这样吗？#当别人问我上班..&quot;,
+            ...
+        &#125;,
+    ]
+&#125;
+</code></pre>
+<h2 id="2-搜索接口"><a href="#2-搜索接口" class="headerlink" title="2.搜索接口"></a>2.搜索接口</h2><table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>示例值</th>
+<th>是否必填</th>
+<th>参数类型</th>
+<th>参数描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>mid</td>
+<td>1</td>
+<td>必填</td>
+<td>text</td>
+<td>模型mid 1影片、2文章、3专题、8明星、9角色、11剧情</td>
+</tr>
+<tr>
+<td>wd</td>
+<td>招魂</td>
+<td>必填</td>
+<td>text</td>
+<td>关键词</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>10</td>
+<td>必填</td>
+<td>text</td>
+<td>获取数量</td>
+</tr>
+<tr>
+<td>imestamp</td>
+<td>1574339368127</td>
+<td>必填</td>
+<td>text</td>
+<td>时间戳</td>
+</tr>
+</tbody></table>
+<p>响应实例：</p>
+<pre><code class="json">&#123;
+    &quot;code&quot;: 1,
+    &quot;msg&quot;: &quot;数据列表&quot;,
+    &quot;page&quot;: 1,
+    &quot;pagecount&quot;: 3,
+    &quot;limit&quot;: 10,
+    &quot;total&quot;: 25,
+    &quot;list&quot;: [
+        &#123;
+            &quot;id&quot;: 1593,
+            &quot;name&quot;: &quot;我也搞不懂他是怎么被困这里的 #宅家dou剧场  #我的观影报告  #萤火计划&quot;,
+            &quot;en&quot;: &quot;woyegaobudongtashizenmebeikunzhelidezhaijiadoujuchangwodeguanyingbaogaoyinghuojihua&quot;,
+            &quot;pic&quot;: &quot;https://p3.douyinpic.com/tos-cn-p-0015/34f94d7f8bda45048c14988492ef9500_1620207826~tplv-dy-360p.jpeg?from=4257465056&amp;s=&amp;se=false&amp;sh=&amp;sc=&amp;l=202105312051560101501660281A0EC310&amp;biz_tag=feed_cover&quot;
+        &#125;,
+        &#123;
+            &quot;id&quot;: 1467,
+            &quot;name&quot;: &quot;假如爱情来临我的心永远不会迟到@DOU+小助手&quot;,
+            &quot;en&quot;: &quot;jiaruaiqinglailinwodexinyongyuanbuhuichidaoDOUxiaozhushou&quot;,
+            &quot;pic&quot;: &quot;https://p3.douyinpic.com/tos-cn-p-0015/be736dd849f744e7848473210c3c8131_1619099706~tplv-dy-360p.jpeg?from=4257465056&quot;
+        &#125;,
+        &#123;
+            &quot;id&quot;: 1360,
+            &quot;name&quot;: &quot;有人说我的视频没营养 怎么？你的视频在炖骨头汤？&quot;,
+            &quot;en&quot;: &quot;yourenshuowodeshipinmeiyingyangzenmenideshipinzaidungutoutang&quot;,
+            &quot;pic&quot;: &quot;https://p9.douyinpic.com/tos-cn-p-0015/2af445900fa14c64b03c0d0390e2bd81_1618493679~tplv-dy-360p.jpeg?from=4257465056&amp;s=&amp;se=false&amp;sh=&amp;sc=&amp;l=20210531205248010150201080310EC297&amp;biz_tag=feed_cover&quot;
+        &#125;,
+        &#123;
+            &quot;id&quot;: 1350,
+            &quot;name&quot;: &quot;有了油菜花，就承托不出我的马甲线了，&quot;,
+            &quot;en&quot;: &quot;youliaoyoucaihuajiuchengtuobuchuwodemajiaxianliao&quot;,
+            &quot;pic&quot;: &quot;https://p26.douyinpic.com/tos-cn-p-0015/47c6c91025a64b6daa95ee55d33fdcff_1618363339~tplv-dy-360p.jpeg?from=4257465056&quot;
+        &#125;,
+        &#123;
+            &quot;id&quot;: 1301,
+            &quot;name&quot;: &quot;#抖in美好溧阳 #万物皆可智慧 #没事开心一下 #摆好你的姿态 #没错是我的腿呀 #你的女友已上线请查收&quot;,
+            &quot;en&quot;: &quot;douinmeihaoliyangwanwujiekezhihuimeishikaixinyixiabaihaonidezitaimeicuoshiwodetuiyanidenvyouyishangxianqingchashou&quot;,
+            &quot;pic&quot;: &quot;https://p29.douyinpic.com/tos-cn-p-0015/6b3f2a301a2b40fd805ed8e1c5b57de6_1618228574~tplv-dy-360p.jpeg?from=4257465056&quot;
+        &#125;,
+        &#123;
+            &quot;id&quot;: 1284,
+            &quot;name&quot;: &quot;好久没有直播有没有想我的？@抖音小助手 #舞蹈 #创作灵感&quot;,
+            &quot;en&quot;: &quot;haojiumeiyouzhiboyoumeiyouxiangwodedouyinxiaozhushouwudaochuangzuolinggan&quot;,
+            &quot;pic&quot;: &quot;https://p6.douyinpic.com/tos-cn-p-0015/124267af2a314b54bed771e528cac1a8_1618113455~tplv-dy-360p.jpeg?from=4257465056&amp;s=&amp;se=false&amp;sh=&amp;sc=&amp;l=202105312053370101501821001E0ED364&amp;biz_tag=feed_cover&quot;
+        &#125;,
+        &#123;
+            &quot;id&quot;: 1246,
+            &quot;name&quot;: &quot;关于我的故事还是听我的版本好一点#原相机&quot;,
+            &quot;en&quot;: &quot;guanyuwodegushihuanshitingwodebanbenhaoyidianyuanxiangji&quot;,
+            &quot;pic&quot;: &quot;https://p9.douyinpic.com/tos-cn-p-0015/dfa28fcbe6e840f094f824827ff8b7a0_1617918242~tplv-dy-360p.jpeg?from=4257465056&amp;s=&amp;se=false&amp;sh=&amp;sc=&amp;l=20210531205331010150157232090F227B&amp;biz_tag=feed_cover&quot;
+        &#125;,
+        &#123;
+            &quot;id&quot;: 1199,
+            &quot;name&quot;: &quot;#创作灵感 #牛仔裤 小时候偷喝我爸两罐红牛，追着我打，笑死，我的能量超乎你想象&quot;,
+            &quot;en&quot;: &quot;chuangzuolingganniuzikuxiaoshihoutouhewobaliangguanhongniuzhuizhuowodaxiaosiwodenengliangchaohunixiangxiang&quot;,
+            &quot;pic&quot;: &quot;https://p26.douyinpic.com/tos-cn-p-0015/488f094a79154123ad43f3152ef3fdd7_1617541987~tplv-dy-360p.jpeg?from=4257465056&amp;s=&amp;se=false&amp;sh=&amp;sc=&amp;l=202105312054250101502221495B0F3590&amp;biz_tag=feed_cover&quot;
+        &#125;,
+        &#123;
+            &quot;id&quot;: 1189,
+            &quot;name&quot;: &quot;你有你的背景，我有我的背影，安排#大长腿&quot;,
+            &quot;en&quot;: &quot;niyounidebeijingwoyouwodebeiyinganpaidachangtui&quot;,
+            &quot;pic&quot;: &quot;https://p26.douyinpic.com/tos-cn-p-0015/6f993bd8cd46412c82d41df0f3a64e31_1616750332~tplv-dy-360p.jpeg?from=4257465056&quot;
+        &#125;,
+        &#123;
+            &quot;id&quot;: 1161,
+            &quot;name&quot;: &quot;我的小蛮腰中午可以露出来了，继续减肥再瘦十斤#微胖&quot;,
+            &quot;en&quot;: &quot;wodexiaomanyaozhongwukeyiluchulailiaojixujianfeizaishoushijinweipang&quot;,
+            &quot;pic&quot;: &quot;https://p6.douyinpic.com/tos-cn-p-0015/71ccc83db7674648a83d08314a2323de_1617954719~tplv-dy-360p.jpeg?from=4257465056&amp;s=&amp;se=false&amp;sh=&amp;sc=&amp;l=202105312054120101511722311C0F10D3&amp;biz_tag=feed_cover&quot;
+        &#125;
+    ],
+    &quot;url&quot;: &quot;/index.php/vodsearch/mac_wd-------------.html&quot;
+&#125;
+</code></pre>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <script>
+    function timeDifference(timeStr) {
+        // 将输入的时间字符串转换为 Date 对象
+        const targetDate = new Date(timeStr);
+        if (isNaN(targetDate.getTime())) {
+            throw new Error('无效的时间格式，支持的格式如: "YYYY-MM-DD HH:mm:ss"');
+        }
+
+        // 获取当前时间
+        const now = new Date();
+
+        // 计算年差
+        let years = now.getFullYear() - targetDate.getFullYear();
+
+        // 计算月差
+        let months = now.getMonth() - targetDate.getMonth();
+
+        // 计算日差
+        let days = now.getDate() - targetDate.getDate();
+
+        // 如果月份或日期不够减，则向前借位
+        if (days < 0) {
+            // 获取上个月的天数
+            const prevMonthLastDay = new Date(
+                now.getFullYear(),
+                now.getMonth(),
+                0
+            ).getDate();
+            days += prevMonthLastDay;
+            months--;
+        }
+
+        if (months < 0) {
+            months += 12;
+            years--;
+        }
+
+        // 处理目标日期在未来的情况
+        if (years < 0) {
+            years = Math.abs(years);
+            months = 11 - months;
+            days = new Date(
+                targetDate.getFullYear(),
+                targetDate.getMonth() + 1,
+                0
+            ).getDate() - days;
+
+            if (days > 0) {
+                months++;
+            }
+
+            if (months >= 12) {
+                years++;
+                months %= 12;
+            }
+        }
+
+        // 构建结果字符串
+        return `${years}年${months}月${days}天`;
+    }
+    document.addEventListener("DOMContentLoaded",  ()=> {
+        document.getElementById('runTime').innerText = this.timeDifference("Sat Oct 01 2016 08:00:00 GMT+0800 (中国标准时间)"); 
+    });
+</script>
+<footer id="footer">
+    <div id="footer-wrap">
+        <!-- <div>
+            &copy;
+            2022 - 2025 可莉害了
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;可莉害了
+        </div> -->
+        <div>
+            网站已运行: <span id="runTime">1年1天</span>
+            <!-- Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a> -->
+        </div>
+        
+    </div>
+</footer>
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

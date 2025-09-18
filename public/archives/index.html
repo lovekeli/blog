@@ -1,0 +1,1333 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Archives | 可莉害了</title>
+    <meta name="author" content="可莉害了" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/../img/head.jpeg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+<script src="/js/lib/search.js"></script>
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/../images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>可莉害了</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;首页</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;归档</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;标签</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;关于我</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;可莉害了</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">首页</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">归档</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">标签</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">关于我</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            
+<div id="archives">
+    
+    <input id="search-bar" class="input" placeholder="搜索" v-model="rawSearch" />
+    
+    <div id="timeline-wrap" ref="timeline">
+        
+        <div class="timeline" data-title="windows无权限删除文件处理">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2025/2/7</div>
+                <a href="/2025/02/07/windows%E6%97%A0%E6%9D%83%E9%99%90%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/">
+                    <h3>windows无权限删除文件处理</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/%E6%9D%82%E8%B0%88/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            杂谈
+                        </a>
+                    </span>
+                    
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </span>
+                        
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/%E6%9D%82%E8%B0%88/" style="color: #00bcd4">
+                                杂谈
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="unity贴花">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2025/2/7</div>
+                <a href="/2025/02/07/unity%E8%B4%B4%E8%8A%B1/">
+                    <h3>unity贴花</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/unity/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            unity
+                        </a>
+                    </span>
+                    
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </span>
+                        
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/unity/" style="color: #03a9f4">
+                                unity
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="egret图文混排">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2025/2/7</div>
+                <a href="/2025/02/07/egret%E5%9B%BE%E6%96%87%E6%B7%B7%E6%8E%92/">
+                    <h3>egret图文混排</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/egret/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            egret
+                        </a>
+                    </span>
+                    
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </span>
+                        
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/%E6%8F%92%E4%BB%B6/" style="color: #ffa2c4">
+                                插件
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="nodejs爬虫">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2025/2/7</div>
+                <a href="/2025/02/07/nodejs%E7%88%AC%E8%99%AB/">
+                    <h3>nodejs爬虫</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/nodejs/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            nodejs
+                        </a>
+                    </span>
+                    
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </span>
+                        
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/%E7%BD%91%E7%BB%9C/" style="color: #03a9f4">
+                                网络
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="csharp随机数生成">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2025/2/7</div>
+                <a href="/2025/02/07/csharp%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%94%9F%E6%88%90/">
+                    <h3>csharp随机数生成</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/csharp/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            csharp
+                        </a>
+                    </span>
+                    
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </span>
+                        
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/csharp/" style="color: #00bcd4">
+                                csharp
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="网页添加看板娘">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2025/2/7</div>
+                <a href="/2025/02/07/%E7%BD%91%E9%A1%B5%E6%B7%BB%E5%8A%A0%E7%9C%8B%E6%9D%BF%E5%A8%98/">
+                    <h3>网页添加看板娘</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/html/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            html
+                        </a>
+                    </span>
+                    
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </span>
+                        
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/%E6%8F%92%E4%BB%B6/" style="color: #00bcd4">
+                                插件
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="iframe嵌套时与主页面数据交互">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2025/2/12</div>
+                <a href="/2025/02/12/iframe%E5%B5%8C%E5%A5%97%E6%97%B6%E4%B8%8E%E4%B8%BB%E9%A1%B5%E9%9D%A2%E6%95%B0%E6%8D%AE%E4%BA%A4%E4%BA%92/">
+                    <h3>iframe嵌套时与主页面数据交互</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/%E5%89%8D%E7%AB%AF/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            前端
+                        </a>
+                    </span>
+                    
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </span>
+                        
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/JavaScript/" style="color: #ffa2c4">
+                                JavaScript
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="unity自定义编辑器常用函数">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2025/3/5</div>
+                <a href="/2025/03/05/unity%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BC%96%E8%BE%91%E5%99%A8%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/">
+                    <h3>unity自定义编辑器常用函数</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/unity/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            unity
+                        </a>
+                    </span>
+                    
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </span>
+                        
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/unity/" style="color: #ffa2c4">
+                                unity
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="easysave插件使用">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2025/3/5</div>
+                <a href="/2025/03/05/EasySave%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8/">
+                    <h3>EasySave插件使用</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/unity/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            unity
+                        </a>
+                    </span>
+                    
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </span>
+                        
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/%E6%8F%92%E4%BB%B6/" style="color: #00a596">
+                                插件
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="c#连接数据库，提示utf8mb3字符集错误">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2025/4/22</div>
+                <a href="/2025/04/22/csharp%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%8C%E6%8F%90%E7%A4%BAutf8mb3%E5%AD%97%E7%AC%A6%E9%9B%86%E9%94%99%E8%AF%AF/">
+                    <h3>c#连接数据库，提示utf8mb3字符集错误</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            数据库
+                        </a>
+                    </span>
+                    
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </span>
+                        
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/mysql/" style="color: #00bcd4">
+                                mysql
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="c#使用markdown渲染成html">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2025/6/11</div>
+                <a href="/2025/06/11/csharp%E5%B0%86markdown%E8%BD%AChtml/">
+                    <h3>c#使用markdown渲染成html</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/csharp/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            csharp
+                        </a>
+                    </span>
+                    
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </span>
+                        
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/%E6%8F%92%E4%BB%B6/" style="color: #00a596">
+                                插件
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="unity使用zfbroswer进行嵌入浏览器">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2025/6/13</div>
+                <a href="/2025/06/13/unity%E4%BD%BF%E7%94%A8ZFBroswer%E8%BF%9B%E8%A1%8C%E5%B5%8C%E5%85%A5%E6%B5%8F%E8%A7%88%E5%99%A8/">
+                    <h3>unity使用ZFBroswer进行嵌入浏览器</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/%E5%89%8D%E7%AB%AF/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            前端
+                        </a>
+                    </span>
+                    
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </span>
+                        
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/unity/" style="color: #03a9f4">
+                                unity
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="js录音">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2025/6/13</div>
+                <a href="/2025/06/13/js%E5%BD%95%E9%9F%B3/">
+                    <h3>js录音</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/%E5%89%8D%E7%AB%AF/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            前端
+                        </a>
+                    </span>
+                    
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </span>
+                        
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/%E5%BC%80%E6%BA%90/" style="color: #00a596">
+                                开源
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="使用sshwifty搭建在线ssh网站">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2025/6/17</div>
+                <a href="/2025/06/17/%E4%BD%BF%E7%94%A8sshwifty%E6%90%AD%E5%BB%BA%E5%9C%A8%E7%BA%BFssh%E7%BD%91%E7%AB%99/">
+                    <h3>使用sshwifty搭建在线ssh网站</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/%E6%9D%82%E8%B0%88/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            杂谈
+                        </a>
+                    </span>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="linux命令在线学习">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2025/6/17</div>
+                <a href="/2025/06/17/linux%E5%91%BD%E4%BB%A4%E5%9C%A8%E7%BA%BF%E5%AD%A6%E4%B9%A0/">
+                    <h3>linux命令在线学习</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/linux/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            linux
+                        </a>
+                    </span>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="开源软件接口分享">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2025/6/19</div>
+                <a href="/2025/06/19/%E5%BC%80%E6%BA%90%E8%BD%AF%E4%BB%B6%E6%8E%A5%E5%8F%A3%E5%88%86%E4%BA%AB/">
+                    <h3>开源软件接口分享</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/%E6%9D%82%E8%B0%88/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            杂谈
+                        </a>
+                    </span>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="关于unity中tmp字体部分文字不显示">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2025/6/26</div>
+                <a href="/2025/06/26/%E5%85%B3%E4%BA%8Eunity%E4%B8%ADTMP%E5%AD%97%E4%BD%93%E9%83%A8%E5%88%86%E6%96%87%E5%AD%97%E4%B8%8D%E6%98%BE%E7%A4%BA/">
+                    <h3>关于unity中TMP字体部分文字不显示</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/unity/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            unity
+                        </a>
+                    </span>
+                    
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </span>
+                        
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/unity/" style="color: #ffa2c4">
+                                unity
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="普通项目转urp项目材质丢失">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2025/7/2</div>
+                <a href="/2025/07/02/%E6%99%AE%E9%80%9A%E9%A1%B9%E7%9B%AE%E8%BD%ACurp%E9%A1%B9%E7%9B%AE%E6%9D%90%E8%B4%A8%E4%B8%A2%E5%A4%B1/">
+                    <h3>普通项目转urp项目材质丢失</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/unity/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            unity
+                        </a>
+                    </span>
+                    
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </span>
+                        
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/unity/" style="color: #ffa2c4">
+                                unity
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="cloudflare网站正确的使用姿势">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2025/7/9</div>
+                <a href="/2025/07/09/cloudflare%E7%BD%91%E7%AB%99%E6%AD%A3%E7%A1%AE%E7%9A%84%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BF/">
+                    <h3>cloudflare网站正确的使用姿势</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/%E6%9D%82%E8%B0%88/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            杂谈
+                        </a>
+                    </span>
+                    
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </span>
+                        
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/cloudflare/" style="color: #ff7d73">
+                                cloudflare
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="创建图片压缩包">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2025/7/9</div>
+                <a href="/2025/07/09/%E5%88%9B%E5%BB%BA%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9%E5%8C%85/">
+                    <h3>创建图片压缩包</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/%E6%9D%82%E8%B0%88/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            杂谈
+                        </a>
+                    </span>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="解决github访问问题">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2025/7/10</div>
+                <a href="/2025/07/10/%E8%A7%A3%E5%86%B3Github%E8%AE%BF%E9%97%AE%E9%97%AE%E9%A2%98/">
+                    <h3>解决Github访问问题</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/%E6%9D%82%E8%B0%88/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            杂谈
+                        </a>
+                    </span>
+                    
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </span>
+                        
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/Github/" style="color: #ffa2c4">
+                                Github
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="ubuntu安装nodejs">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2025/7/11</div>
+                <a href="/2025/07/11/ubuntu%E5%AE%89%E8%A3%85nodejs/">
+                    <h3>ubuntu安装nodejs</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/nodejs/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            nodejs
+                        </a>
+                    </span>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="linux后台运行命令">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2025/7/11</div>
+                <a href="/2025/07/11/linux%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4/">
+                    <h3>linux后台运行命令</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/linux/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            linux
+                        </a>
+                    </span>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="maccms采集接口详解">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2025/7/16</div>
+                <a href="/2025/07/16/maccms%E9%87%87%E9%9B%86%E6%8E%A5%E5%8F%A3%E8%AF%A6%E8%A7%A3/">
+                    <h3>maccms采集接口详解</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/api/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            api
+                        </a>
+                    </span>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="解决nodejs使用sqlite数据库时多路由同时连接问题">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2025/7/17</div>
+                <a href="/2025/07/17/%E8%A7%A3%E5%86%B3nodejs%E4%BD%BF%E7%94%A8sqlite%E6%95%B0%E6%8D%AE%E5%BA%93%E6%97%B6%E5%A4%9A%E8%B7%AF%E7%94%B1%E5%90%8C%E6%97%B6%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/">
+                    <h3>解决nodejs使用sqlite数据库时多路由同时连接问题</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/nodejs/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            nodejs
+                        </a>
+                    </span>
+                    
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </span>
+                        
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/express/" style="color: #00bcd4">
+                                express
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="color: #00a596">
+                                数据库
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="nodejs请求跨域解决">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2025/7/17</div>
+                <a href="/2025/07/17/nodejs%E8%AF%B7%E6%B1%82%E8%B7%A8%E5%9F%9F%E8%A7%A3%E5%86%B3/">
+                    <h3>nodejs请求跨域解决</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/nodejs/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            nodejs
+                        </a>
+                    </span>
+                    
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </span>
+                        
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/express/" style="color: #00a596">
+                                express
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="nodejs后端常见问题解决方案">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2025/7/17</div>
+                <a href="/2025/07/17/nodejs%E5%90%8E%E7%AB%AF%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">
+                    <h3>nodejs后端常见问题解决方案</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/nodejs/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            nodejs
+                        </a>
+                    </span>
+                    
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </span>
+                        
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/express/" style="color: #03a9f4">
+                                express
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="使用lfs追踪git的大文件">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2025/7/18</div>
+                <a href="/2025/07/18/%E4%BD%BF%E7%94%A8lfs%E8%BF%BD%E8%B8%AAgit%E7%9A%84%E5%A4%A7%E6%96%87%E4%BB%B6/">
+                    <h3>使用lfs追踪git的大文件</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/unity/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            unity
+                        </a>
+                    </span>
+                    
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </span>
+                        
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/unity/" style="color: #00bcd4">
+                                unity
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="nodejs的定时任务">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2025/7/18</div>
+                <a href="/2025/07/18/nodejs%E7%9A%84%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/">
+                    <h3>nodejs的定时任务</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/nodejs/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            nodejs
+                        </a>
+                    </span>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="nodejs日志模块">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2025/7/18</div>
+                <a href="/2025/07/18/nodejs%E6%97%A5%E5%BF%97%E6%A8%A1%E5%9D%97/">
+                    <h3>nodejs日志模块</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/nodejs/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            nodejs
+                        </a>
+                    </span>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="关于unity在编辑器模式下运行单例出现的问题">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2025/7/25</div>
+                <a href="/2025/07/25/%E5%85%B3%E4%BA%8EUnity%E5%9C%A8%E7%BC%96%E8%BE%91%E5%99%A8%E6%A8%A1%E5%BC%8F%E4%B8%8B%E8%BF%90%E8%A1%8C%E5%8D%95%E4%BE%8B%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98/">
+                    <h3>关于Unity在编辑器模式下运行单例出现的问题</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/unity/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            unity
+                        </a>
+                    </span>
+                    
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </span>
+                        
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/unity/" style="color: #ff7d73">
+                                unity
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline" data-title="unity实现在继承graphic的组件上画图">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2025/7/29</div>
+                <a href="/2025/07/29/unity%E5%AE%9E%E7%8E%B0%E5%9C%A8%E7%BB%A7%E6%89%BFGraphic%E7%9A%84%E7%BB%84%E4%BB%B6%E4%B8%8A%E7%94%BB%E5%9B%BE/">
+                    <h3>unity实现在继承Graphic的组件上画图</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/unity/">
+                            <span class="icon">
+                                <i class="fa-solid fa-bookmark fa-fw"></i>
+                            </span>
+                            unity
+                        </a>
+                    </span>
+                    
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </span>
+                        
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/unity/" style="color: #ffa2c4">
+                                unity
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+            <script>
+    function timeDifference(timeStr) {
+        // 将输入的时间字符串转换为 Date 对象
+        const targetDate = new Date(timeStr);
+        if (isNaN(targetDate.getTime())) {
+            throw new Error('无效的时间格式，支持的格式如: "YYYY-MM-DD HH:mm:ss"');
+        }
+
+        // 获取当前时间
+        const now = new Date();
+
+        // 计算年差
+        let years = now.getFullYear() - targetDate.getFullYear();
+
+        // 计算月差
+        let months = now.getMonth() - targetDate.getMonth();
+
+        // 计算日差
+        let days = now.getDate() - targetDate.getDate();
+
+        // 如果月份或日期不够减，则向前借位
+        if (days < 0) {
+            // 获取上个月的天数
+            const prevMonthLastDay = new Date(
+                now.getFullYear(),
+                now.getMonth(),
+                0
+            ).getDate();
+            days += prevMonthLastDay;
+            months--;
+        }
+
+        if (months < 0) {
+            months += 12;
+            years--;
+        }
+
+        // 处理目标日期在未来的情况
+        if (years < 0) {
+            years = Math.abs(years);
+            months = 11 - months;
+            days = new Date(
+                targetDate.getFullYear(),
+                targetDate.getMonth() + 1,
+                0
+            ).getDate() - days;
+
+            if (days > 0) {
+                months++;
+            }
+
+            if (months >= 12) {
+                years++;
+                months %= 12;
+            }
+        }
+
+        // 构建结果字符串
+        return `${years}年${months}月${days}天`;
+    }
+    document.addEventListener("DOMContentLoaded",  ()=> {
+        document.getElementById('runTime').innerText = this.timeDifference("Sat Oct 01 2016 08:00:00 GMT+0800 (中国标准时间)"); 
+    });
+</script>
+<footer id="footer">
+    <div id="footer-wrap">
+        <!-- <div>
+            &copy;
+            2022 - 2025 可莉害了
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;可莉害了
+        </div> -->
+        <div>
+            网站已运行: <span id="runTime">1年1天</span>
+            <!-- Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a> -->
+        </div>
+        
+    </div>
+</footer>
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+</body>
+</html>

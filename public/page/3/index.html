@@ -1,0 +1,797 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>可莉害了</title>
+    <meta name="author" content="可莉害了" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/../img/head.jpeg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+<script src="/js/lib/home.js"></script>
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/../images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>可莉害了</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;首页</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;归档</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;标签</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;关于我</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;可莉害了</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">首页</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">归档</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">标签</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">关于我</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div id="home-head">
+    <div
+        id="home-background"
+        ref="homeBackground"
+        data-images="https://vip.123pan.cn/1819440530/homepage/blog/background.jpg"
+    ></div>
+    <div id="home-info" @click="homeClick">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="info">
+            <div class="wrap">
+                <h1>可莉害了</h1>
+                <h3></h3>
+                <h5></h5>
+            </div>
+        </span>
+    </div>
+</div>
+<div
+    id="home-posts-wrap"
+    ref="homePostsWrap"
+    true
+>
+    <div id="home-posts">
+        
+
+<div class="post">
+    <a href="/2025/06/13/unity%E4%BD%BF%E7%94%A8ZFBroswer%E8%BF%9B%E8%A1%8C%E5%B5%8C%E5%85%A5%E6%B5%8F%E8%A7%88%E5%99%A8/">
+        <h2 class="post-title">unity使用ZFBroswer进行嵌入浏览器</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E5%89%8D%E7%AB%AF/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                前端
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/6/13
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>unity使用ZFBroswer进行嵌入浏览器</p>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/unity/" style="color: #ff7d73">unity</a>
+        </span>
+        
+    </div>
+    <a href="/2025/06/13/unity%E4%BD%BF%E7%94%A8ZFBroswer%E8%BF%9B%E8%A1%8C%E5%B5%8C%E5%85%A5%E6%B5%8F%E8%A7%88%E5%99%A8/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2025/06/11/csharp%E5%B0%86markdown%E8%BD%AChtml/">
+        <h2 class="post-title">c#使用markdown渲染成html</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/csharp/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                csharp
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/6/11
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>Markdig的使用方式</p>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/%E6%8F%92%E4%BB%B6/" style="color: #03a9f4">插件</a>
+        </span>
+        
+    </div>
+    <a href="/2025/06/11/csharp%E5%B0%86markdown%E8%BD%AChtml/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2025/04/22/csharp%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%8C%E6%8F%90%E7%A4%BAutf8mb3%E5%AD%97%E7%AC%A6%E9%9B%86%E9%94%99%E8%AF%AF/">
+        <h2 class="post-title">c#连接数据库，提示utf8mb3字符集错误</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                数据库
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/4/22
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>c#连接数据库，提示utf8mb3字符集错误</p>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/mysql/" style="color: #ff7d73">mysql</a>
+        </span>
+        
+    </div>
+    <a href="/2025/04/22/csharp%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%8C%E6%8F%90%E7%A4%BAutf8mb3%E5%AD%97%E7%AC%A6%E9%9B%86%E9%94%99%E8%AF%AF/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2025/03/05/EasySave%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8/">
+        <h2 class="post-title">EasySave插件使用</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/unity/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                unity
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/3/5
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>EasySave插件使用</p>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/%E6%8F%92%E4%BB%B6/" style="color: #00bcd4">插件</a>
+        </span>
+        
+    </div>
+    <a href="/2025/03/05/EasySave%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2025/03/05/unity%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BC%96%E8%BE%91%E5%99%A8%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/">
+        <h2 class="post-title">unity自定义编辑器常用函数</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/unity/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                unity
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/3/5
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>unity自定义编辑器常用函数</p>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/unity/" style="color: #03a9f4">unity</a>
+        </span>
+        
+    </div>
+    <a href="/2025/03/05/unity%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BC%96%E8%BE%91%E5%99%A8%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2025/02/12/iframe%E5%B5%8C%E5%A5%97%E6%97%B6%E4%B8%8E%E4%B8%BB%E9%A1%B5%E9%9D%A2%E6%95%B0%E6%8D%AE%E4%BA%A4%E4%BA%92/">
+        <h2 class="post-title">iframe嵌套时与主页面数据交互</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E5%89%8D%E7%AB%AF/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                前端
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/2/12
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>iframe嵌套时与主页面数据交互</p>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/JavaScript/" style="color: #03a9f4">JavaScript</a>
+        </span>
+        
+    </div>
+    <a href="/2025/02/12/iframe%E5%B5%8C%E5%A5%97%E6%97%B6%E4%B8%8E%E4%B8%BB%E9%A1%B5%E9%9D%A2%E6%95%B0%E6%8D%AE%E4%BA%A4%E4%BA%92/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2025/02/07/%E7%BD%91%E9%A1%B5%E6%B7%BB%E5%8A%A0%E7%9C%8B%E6%9D%BF%E5%A8%98/">
+        <h2 class="post-title">网页添加看板娘</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/html/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                html
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/2/7
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>给网页添加看板娘</p>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/%E6%8F%92%E4%BB%B6/" style="color: #ff7d73">插件</a>
+        </span>
+        
+    </div>
+    <a href="/2025/02/07/%E7%BD%91%E9%A1%B5%E6%B7%BB%E5%8A%A0%E7%9C%8B%E6%9D%BF%E5%A8%98/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2025/02/07/csharp%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%94%9F%E6%88%90/">
+        <h2 class="post-title">csharp随机数生成</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/csharp/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                csharp
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/2/7
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>csharp随机数生成</p>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/csharp/" style="color: #00a596">csharp</a>
+        </span>
+        
+    </div>
+    <a href="/2025/02/07/csharp%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%94%9F%E6%88%90/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2025/02/07/nodejs%E7%88%AC%E8%99%AB/">
+        <h2 class="post-title">nodejs爬虫</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/nodejs/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                nodejs
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/2/7
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>nodejs爬虫</p>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/%E7%BD%91%E7%BB%9C/" style="color: #ffa2c4">网络</a>
+        </span>
+        
+    </div>
+    <a href="/2025/02/07/nodejs%E7%88%AC%E8%99%AB/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2025/02/07/egret%E5%9B%BE%E6%96%87%E6%B7%B7%E6%8E%92/">
+        <h2 class="post-title">egret图文混排</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/egret/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                egret
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/2/7
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>egret图文混排</p>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/%E6%8F%92%E4%BB%B6/" style="color: #00a596">插件</a>
+        </span>
+        
+    </div>
+    <a href="/2025/02/07/egret%E5%9B%BE%E6%96%87%E6%B7%B7%E6%8E%92/" class="go-post">阅读全文</a>
+</div>
+
+
+        <div class="page-current">
+    
+    <a class="page-num" href="/page/2/">
+        <i class="fa-solid fa-caret-left fa-fw"></i>
+    </a>
+    <a class="page-num" href="/">1</a>
+    <span class="page-omit">...</span>
+    
+    <span class="current">3</span>
+    
+    <a class="page-num" href="/page/4">
+        4
+    </a>
+    
+    
+    
+    
+    <a class="page-num" href="/page/4/">
+        <i class="fa-solid fa-caret-right fa-fw"></i>
+    </a>
+    
+</div>
+
+    </div>
+    
+    <div id="home-card">
+        <div id="card-style">
+    <div id="card-div">
+        <div class="avatar">
+            <img src="/../img/head.jpeg" alt="avatar" />
+        </div>
+        <div class="name">可莉害了</div>
+        <div class="description">
+            <p>宅男拯救世界~</p>
+
+        </div>
+        
+        
+        <div class="friend-links">
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://onlylovekeli.cn/nav/index.html">在线应用</a>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
+
+    </div>
+    
+</div>
+
+            <script>
+    function timeDifference(timeStr) {
+        // 将输入的时间字符串转换为 Date 对象
+        const targetDate = new Date(timeStr);
+        if (isNaN(targetDate.getTime())) {
+            throw new Error('无效的时间格式，支持的格式如: "YYYY-MM-DD HH:mm:ss"');
+        }
+
+        // 获取当前时间
+        const now = new Date();
+
+        // 计算年差
+        let years = now.getFullYear() - targetDate.getFullYear();
+
+        // 计算月差
+        let months = now.getMonth() - targetDate.getMonth();
+
+        // 计算日差
+        let days = now.getDate() - targetDate.getDate();
+
+        // 如果月份或日期不够减，则向前借位
+        if (days < 0) {
+            // 获取上个月的天数
+            const prevMonthLastDay = new Date(
+                now.getFullYear(),
+                now.getMonth(),
+                0
+            ).getDate();
+            days += prevMonthLastDay;
+            months--;
+        }
+
+        if (months < 0) {
+            months += 12;
+            years--;
+        }
+
+        // 处理目标日期在未来的情况
+        if (years < 0) {
+            years = Math.abs(years);
+            months = 11 - months;
+            days = new Date(
+                targetDate.getFullYear(),
+                targetDate.getMonth() + 1,
+                0
+            ).getDate() - days;
+
+            if (days > 0) {
+                months++;
+            }
+
+            if (months >= 12) {
+                years++;
+                months %= 12;
+            }
+        }
+
+        // 构建结果字符串
+        return `${years}年${months}月${days}天`;
+    }
+    document.addEventListener("DOMContentLoaded",  ()=> {
+        document.getElementById('runTime').innerText = this.timeDifference("Sat Oct 01 2016 08:00:00 GMT+0800 (中国标准时间)"); 
+    });
+</script>
+<footer id="footer">
+    <div id="footer-wrap">
+        <!-- <div>
+            &copy;
+            2022 - 2025 可莉害了
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;可莉害了
+        </div> -->
+        <div>
+            网站已运行: <span id="runTime">1年1天</span>
+            <!-- Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a> -->
+        </div>
+        
+    </div>
+</footer>
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+</body>
+</html>
